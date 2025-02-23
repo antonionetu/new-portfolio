@@ -10,7 +10,7 @@ export const Contact = () => {
 				<div className="icons">
 					<div className="icon">
 						<a
-							href="https://wa.me/+5579988766544"
+							href="https://wa.me/+37125562433"
 							target="_blank"
 							rel="noreferrer"
 						>
