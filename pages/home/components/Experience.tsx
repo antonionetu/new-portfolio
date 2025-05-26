@@ -31,10 +31,10 @@ export const Experience = () => {
 		{
 			title: "Freelancer",
 			description:
-				"Worked as a freelancer for 1 year, developing websites, apps, and systems for various clients and projects.",
+				"Worked as a freelancer for 2 year, developing websites, apps, and systems for various clients and projects.",
 			image: experiences_images?.freelancer,
 			blurImageUrl: experiences_images?.freelancer,
-			date: "2020 - 2021",
+			date: "2020 - 2022",
 		},
 		{
 			title: "Computer Science at UNIT",
