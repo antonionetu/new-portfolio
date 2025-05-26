@@ -13,7 +13,7 @@ export const Home = () => {
 				<Section>
 					<div className="text">
 						<p>
-							Software developer since 2018 with 3 years of experience, studying
+							Software developer since 2018 with 4 years of experience, studying
 							Computer Systems at RTU and Computer Science at UNIT.
 						</p>
 						<div className="stacks">
