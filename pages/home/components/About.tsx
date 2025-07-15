@@ -15,9 +15,9 @@ export const About = () => {
 						Fundação Bradesco, Curso em Video, and Udemy courses.
 					</p>
 					<p style={{ marginBottom: "1vw" }}>
-						After UFS, I worked as a freelancer for 2 years, developing websites,
-						apps, and systems for various clients and projects. I have been
-						working at a startup for 2 years, where I developed skills in
+						After UFS, I worked as a freelancer for 2 years, developing
+						websites, apps, and systems for various clients and projects. I have
+						been working at a startup for 2 years, where I developed skills in
 						different technologies and participated in innovative projects.
 						During this time, I also worked on two 6-month parallel projects.
 						Additionally, I was part of a team that developed a product for a

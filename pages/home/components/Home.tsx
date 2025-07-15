@@ -13,8 +13,8 @@ export const Home = () => {
 				<Section>
 					<div className="text">
 						<p>
-							Software developer since 2018, studying
-							Computer Systems at RTU and Computer Science at UNIT.
+							Software developer since 2018, studying Computer Systems at RTU
+							and Computer Science at UNIT.
 						</p>
 						<div className="stacks">
 							<p>Backend</p>

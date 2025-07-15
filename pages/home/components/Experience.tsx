@@ -81,14 +81,14 @@ export const Experience = () => {
 			date: "2024",
 		},
 		{
-		  title: "Computer Systems at RTU",
-		  description:
-		    "Currently pursuing Computer Systems at Riga Technical University (RTU) for international exposure.",
-		  link: "https://www.rtu.lv",
-		  image: experiences_images?.rtu,
-		  blurImageUrl: experiences_images?.rtu,
-		  date: "2025 - Present",
-		}
+			title: "Computer Systems at RTU",
+			description:
+				"Currently pursuing Computer Systems at Riga Technical University (RTU) for international exposure.",
+			link: "https://www.rtu.lv",
+			image: experiences_images?.rtu,
+			blurImageUrl: experiences_images?.rtu,
+			date: "2025 - Present",
+		},
 	]
 
 	return (
