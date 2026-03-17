@@ -1,0 +1,425 @@
+import type { Locale } from "./i18n";
+
+const t = {
+  en: {
+    nav: {
+      home: "Home",
+      about: "About",
+      experience: "Experience",
+      skills: "Skills",
+      education: "Education",
+      contact: "Contact",
+    },
+    hero: {
+      badge: "Building innovative solutions",
+      greeting: "Hi, I\u2019m",
+      subtitle:
+        "Full Stack Developer building scalable products with C#/.NET, Python, React & AWS. Based in Aracaju, Brazil.",
+      cta1: "Get in touch",
+      cta2: "View my work",
+    },
+    about: {
+      index: "01.",
+      title: "About Me",
+      subtitle: "A brief introduction about who I am and what I do.",
+      bio1: "Since 2018, I\u2019ve been building software that solves real problems. It started at UFS (Federal University of Sergipe) and quickly grew into freelance work, startup life, and fintech projects for major Brazilian companies.",
+      bio2: "Today I work as a Mid-Level Full Stack Developer, handling everything from C#/.NET backends and PostgreSQL databases to React frontends and AWS infrastructure. I\u2019ve built AI-powered features, payment systems, CI/CD pipelines, and internal tools that ship to thousands of users.",
+      bio3: "Beyond coding, I mentor students and conduct research in algorithms at UNIT. I also spent a semester at Riga Technical University in Latvia, which gave me an international perspective on software engineering.",
+      stats: {
+        years: "Years of experience",
+        companies: "Companies worked",
+        languages: "Languages spoken",
+        skills: "Technical skills",
+      },
+    },
+    experience: {
+      index: "02.",
+      title: "Experience",
+      subtitle: "My professional journey and the companies I\u2019ve worked with.",
+    },
+    skills: {
+      index: "03.",
+      title: "Skills & Tech",
+      subtitle: "Technologies and tools I work with daily.",
+      backend: "Backend",
+      frontend: "Frontend",
+      database: "Database",
+      devops: "DevOps & Cloud",
+      tools: "Tools & Methods",
+      ai: "AI & Testing",
+    },
+    education: {
+      index: "04.",
+      title: "Education",
+      subtitle: "My academic background and continuous learning.",
+      mentor: "Mentor",
+      mentorDesc:
+        "Mentoring students in software development, helping with best practices, career guidance, and hands-on projects.",
+      researcher: "Undergraduate Researcher",
+      researcherDesc:
+        "Conducting research in algorithms and computational complexity, contributing to academic projects.",
+    },
+    contact: {
+      index: "05.",
+      title: "Let\u2019s Connect",
+      subtitle: "I\u2019m always open to collaborations and interesting projects.",
+      message:
+        "Whether you have a project in mind, a question, or just want to say hi, feel free to reach out. I\u2019ll do my best to get back to you!",
+      button: "Chat on WhatsApp",
+    },
+    footer: {
+      rights: "All rights reserved.",
+      built: "Built with",
+      description: "Full Stack Developer from Aracaju, Brazil. Building scalable solutions with modern technologies.",
+    },
+    languages: {
+      portuguese: "Portuguese",
+      english: "English",
+      spanish: "Spanish",
+      russian: "Russian",
+      latvian: "Latvian",
+      native: "Native",
+      fluent: "Fluent",
+      intermediate: "Intermediate",
+      basic: "Basic",
+    },
+  },
+  pt: {
+    nav: {
+      home: "In\u00edcio",
+      about: "Sobre",
+      experience: "Experi\u00eancia",
+      skills: "Habilidades",
+      education: "Educa\u00e7\u00e3o",
+      contact: "Contato",
+    },
+    hero: {
+      badge: "Construindo solu\u00e7\u00f5es inovadoras",
+      greeting: "Ol\u00e1, eu sou",
+      subtitle:
+        "Desenvolvedor Full Stack criando produtos escal\u00e1veis com C#/.NET, Python, React e AWS. De Aracaju, Brasil.",
+      cta1: "Entre em contato",
+      cta2: "Veja meu trabalho",
+    },
+    about: {
+      index: "01.",
+      title: "Sobre Mim",
+      subtitle: "Uma breve introdu\u00e7\u00e3o sobre quem eu sou e o que fa\u00e7o.",
+      bio1: "Desde 2018, venho construindo software que resolve problemas reais. Come\u00e7ou na UFS (Universidade Federal de Sergipe) e rapidamente evoluiu para trabalho freelance, vida em startup e projetos fintech para grandes empresas brasileiras.",
+      bio2: "Hoje trabalho como Desenvolvedor Full Stack Pleno, lidando com tudo, desde backends em C#/.NET e bancos PostgreSQL at\u00e9 frontends React e infraestrutura AWS. J\u00e1 constru\u00ed features com IA, sistemas de pagamento, pipelines CI/CD e ferramentas internas que atendem milhares de usu\u00e1rios.",
+      bio3: "Al\u00e9m de programar, sou mentor de estudantes e conduzo pesquisas em algoritmos na UNIT. Tamb\u00e9m passei um semestre na Riga Technical University na Let\u00f4nia, o que me deu uma perspectiva internacional sobre engenharia de software.",
+      stats: {
+        years: "Anos de experi\u00eancia",
+        companies: "Projetos realizados",
+        languages: "Idiomas falados",
+        skills: "Habilidades t\u00e9cnicas",
+      },
+    },
+    experience: {
+      index: "02.",
+      title: "Experi\u00eancia",
+      subtitle: "Minha jornada profissional e as empresas onde trabalhei.",
+    },
+    skills: {
+      index: "03.",
+      title: "Habilidades & Tech",
+      subtitle: "Tecnologias e ferramentas que uso no dia a dia.",
+      backend: "Backend",
+      frontend: "Frontend",
+      database: "Banco de Dados",
+      devops: "DevOps & Cloud",
+      tools: "Ferramentas & M\u00e9todos",
+      ai: "IA & Testes",
+    },
+    education: {
+      index: "04.",
+      title: "Educa\u00e7\u00e3o",
+      subtitle: "Minha forma\u00e7\u00e3o acad\u00eamica e aprendizado cont\u00ednuo.",
+      mentor: "Mentor",
+      mentorDesc:
+        "Mentoria de estudantes em desenvolvimento de software, ajudando com boas pr\u00e1ticas, orienta\u00e7\u00e3o de carreira e projetos pr\u00e1ticos.",
+      researcher: "Pesquisador",
+      researcherDesc:
+        "Pesquisa em algoritmos e complexidade computacional, contribuindo para projetos acad\u00eamicos.",
+    },
+    contact: {
+      index: "05.",
+      title: "Vamos Conversar",
+      subtitle: "Estou sempre aberto a colabora\u00e7\u00f5es e projetos interessantes.",
+      message:
+        "Se voc\u00ea tem um projeto em mente, uma d\u00favida, ou s\u00f3 quer dizer oi, fique \u00e0 vontade para entrar em contato. Farei o meu melhor para responder!",
+      button: "Chamar no WhatsApp",
+    },
+    footer: {
+      rights: "Todos os direitos reservados.",
+      built: "Feito com",
+      description: "Desenvolvedor Full Stack de Aracaju, Brasil. Construindo solu\u00e7\u00f5es escal\u00e1veis com tecnologias modernas.",
+    },
+    languages: {
+      portuguese: "Portugu\u00eas",
+      english: "Ingl\u00eas",
+      spanish: "Espanhol",
+      russian: "Russo",
+      latvian: "Let\u00e3o",
+      native: "Nativo",
+      fluent: "Fluente",
+      intermediate: "Intermedi\u00e1rio",
+      basic: "B\u00e1sico",
+    },
+  },
+  es: {
+    nav: {
+      home: "Inicio",
+      about: "Sobre m\u00ed",
+      experience: "Experiencia",
+      skills: "Habilidades",
+      education: "Educaci\u00f3n",
+      contact: "Contacto",
+    },
+    hero: {
+      badge: "Construyendo soluciones innovadoras",
+      greeting: "Hola, soy",
+      subtitle:
+        "Desarrollador Full Stack creando productos escalables con C#/.NET, Python, React y AWS. De Aracaju, Brasil.",
+      cta1: "Cont\u00e1ctame",
+      cta2: "Ver mi trabajo",
+    },
+    about: {
+      index: "01.",
+      title: "Sobre M\u00ed",
+      subtitle: "Una breve introducci\u00f3n sobre qui\u00e9n soy y lo que hago.",
+      bio1: "Desde 2018, he estado construyendo software que resuelve problemas reales. Comenz\u00f3 en la UFS (Universidad Federal de Sergipe) y r\u00e1pidamente evolucion\u00f3 hacia trabajo freelance, vida en startup y proyectos fintech para grandes empresas brasile\u00f1as.",
+      bio2: "Hoy trabajo como Desarrollador Full Stack Mid-Level, manejando desde backends en C#/.NET y bases de datos PostgreSQL hasta frontends React e infraestructura AWS. He construido funciones con IA, sistemas de pago, pipelines CI/CD y herramientas internas que sirven a miles de usuarios.",
+      bio3: "Adem\u00e1s de programar, soy mentor de estudiantes y realizo investigaciones en algoritmos en la UNIT. Tambi\u00e9n pas\u00e9 un semestre en la Riga Technical University en Letonia, lo que me dio una perspectiva internacional sobre ingenier\u00eda de software.",
+      stats: {
+        years: "A\u00f1os de experiencia",
+        companies: "Empresas",
+        languages: "Idiomas hablados",
+        skills: "Habilidades t\u00e9cnicas",
+      },
+    },
+    experience: {
+      index: "02.",
+      title: "Experiencia",
+      subtitle: "Mi trayectoria profesional y las empresas donde trabaj\u00e9.",
+    },
+    skills: {
+      index: "03.",
+      title: "Habilidades & Tech",
+      subtitle: "Tecnolog\u00edas y herramientas que uso diariamente.",
+      backend: "Backend",
+      frontend: "Frontend",
+      database: "Base de Datos",
+      devops: "DevOps & Cloud",
+      tools: "Herramientas & M\u00e9todos",
+      ai: "IA & Testing",
+    },
+    education: {
+      index: "04.",
+      title: "Educaci\u00f3n",
+      subtitle: "Mi formaci\u00f3n acad\u00e9mica y aprendizaje continuo.",
+      mentor: "Mentor",
+      mentorDesc:
+        "Mentor\u00eda a estudiantes en desarrollo de software, ayud\u00e1ndoles con buenas pr\u00e1cticas, orientaci\u00f3n de carrera y proyectos pr\u00e1cticos.",
+      researcher: "Investigador",
+      researcherDesc:
+        "Investigaci\u00f3n en algoritmos y complejidad computacional, contribuyendo a proyectos acad\u00e9micos.",
+    },
+    contact: {
+      index: "05.",
+      title: "Conectemos",
+      subtitle: "Siempre estoy abierto a colaboraciones y proyectos interesantes.",
+      message:
+        "Si tienes un proyecto en mente, una pregunta, o solo quieres saludar, no dudes en contactarme. \u00a1Har\u00e9 lo posible por responderte!",
+      button: "Chatear por WhatsApp",
+    },
+    footer: {
+      rights: "Todos los derechos reservados.",
+      built: "Hecho con",
+      description: "Desarrollador Full Stack de Aracaju, Brasil. Construyendo soluciones escalables con tecnolog\u00edas modernas.",
+    },
+    languages: {
+      portuguese: "Portugu\u00e9s",
+      english: "Ingl\u00e9s",
+      spanish: "Espa\u00f1ol",
+      russian: "Ruso",
+      latvian: "Let\u00f3n",
+      native: "Nativo",
+      fluent: "Fluido",
+      intermediate: "Intermedio",
+      basic: "B\u00e1sico",
+    },
+  },
+  ru: {
+    nav: {
+      home: "\u0413\u043b\u0430\u0432\u043d\u0430\u044f",
+      about: "\u041e\u0431\u043e \u043c\u043d\u0435",
+      experience: "\u041e\u043f\u044b\u0442",
+      skills: "\u041d\u0430\u0432\u044b\u043a\u0438",
+      education: "\u041e\u0431\u0440\u0430\u0437\u043e\u0432\u0430\u043d\u0438\u0435",
+      contact: "\u041a\u043e\u043d\u0442\u0430\u043a\u0442",
+    },
+    hero: {
+      badge: "\u0421\u043e\u0437\u0434\u0430\u044e \u0438\u043d\u043d\u043e\u0432\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u0435 \u0440\u0435\u0448\u0435\u043d\u0438\u044f",
+      greeting: "\u041f\u0440\u0438\u0432\u0435\u0442, \u044f",
+      subtitle:
+        "Full Stack \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u0447\u0438\u043a, \u0441\u043e\u0437\u0434\u0430\u044e\u0449\u0438\u0439 \u043c\u0430\u0441\u0448\u0442\u0430\u0431\u0438\u0440\u0443\u0435\u043c\u044b\u0435 \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u044b \u043d\u0430 C#/.NET, Python, React \u0438 AWS. \u0418\u0437 \u0410\u0440\u0430\u0436\u0430\u0436\u0443, \u0411\u0440\u0430\u0437\u0438\u043b\u0438\u044f.",
+      cta1: "\u0421\u0432\u044f\u0437\u0430\u0442\u044c\u0441\u044f",
+      cta2: "\u041c\u043e\u0438 \u0440\u0430\u0431\u043e\u0442\u044b",
+    },
+    about: {
+      index: "01.",
+      title: "\u041e\u0431\u043e \u043c\u043d\u0435",
+      subtitle: "\u041a\u0440\u0430\u0442\u043a\u043e\u0435 \u0432\u0432\u0435\u0434\u0435\u043d\u0438\u0435 \u043e \u0442\u043e\u043c, \u043a\u0442\u043e \u044f \u0438 \u0447\u0435\u043c \u0437\u0430\u043d\u0438\u043c\u0430\u044e\u0441\u044c.",
+      bio1: "\u0421 2018 \u0433\u043e\u0434\u0430 \u044f \u0441\u043e\u0437\u0434\u0430\u044e \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u043d\u043e\u0435 \u043e\u0431\u0435\u0441\u043f\u0435\u0447\u0435\u043d\u0438\u0435, \u043a\u043e\u0442\u043e\u0440\u043e\u0435 \u0440\u0435\u0448\u0430\u0435\u0442 \u0440\u0435\u0430\u043b\u044c\u043d\u044b\u0435 \u043f\u0440\u043e\u0431\u043b\u0435\u043c\u044b. \u0412\u0441\u0451 \u043d\u0430\u0447\u0430\u043b\u043e\u0441\u044c \u0432 UFS (\u0424\u0435\u0434\u0435\u0440\u0430\u043b\u044c\u043d\u044b\u0439 \u0443\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442 \u0421\u0435\u0440\u0436\u0438\u043f\u0438) \u0438 \u0431\u044b\u0441\u0442\u0440\u043e \u043f\u0435\u0440\u0435\u0440\u043e\u0441\u043b\u043e \u0432\u043e \u0444\u0440\u0438\u043b\u0430\u043d\u0441, \u0440\u0430\u0431\u043e\u0442\u0443 \u0432 \u0441\u0442\u0430\u0440\u0442\u0430\u043f\u0435 \u0438 \u0444\u0438\u043d\u0442\u0435\u0445-\u043f\u0440\u043e\u0435\u043a\u0442\u044b \u0434\u043b\u044f \u043a\u0440\u0443\u043f\u043d\u044b\u0445 \u0431\u0440\u0430\u0437\u0438\u043b\u044c\u0441\u043a\u0438\u0445 \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0439.",
+      bio2: "\u0421\u0435\u0433\u043e\u0434\u043d\u044f \u044f \u0440\u0430\u0431\u043e\u0442\u0430\u044e Full Stack \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u0447\u0438\u043a\u043e\u043c, \u0437\u0430\u043d\u0438\u043c\u0430\u044f\u0441\u044c \u0432\u0441\u0435\u043c: \u043e\u0442 \u0431\u044d\u043a\u0435\u043d\u0434\u043e\u0432 \u043d\u0430 C#/.NET \u0438 \u0431\u0430\u0437 \u0434\u0430\u043d\u043d\u044b\u0445 PostgreSQL \u0434\u043e \u0444\u0440\u043e\u043d\u0442\u0435\u043d\u0434\u043e\u0432 \u043d\u0430 React \u0438 \u0438\u043d\u0444\u0440\u0430\u0441\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u044b AWS. \u042f \u0441\u043e\u0437\u0434\u0430\u0432\u0430\u043b \u0444\u0443\u043d\u043a\u0446\u0438\u0438 \u0441 \u0418\u0418, \u043f\u043b\u0430\u0442\u0451\u0436\u043d\u044b\u0435 \u0441\u0438\u0441\u0442\u0435\u043c\u044b, CI/CD \u043f\u0430\u0439\u043f\u043b\u0430\u0439\u043d\u044b \u0438 \u0432\u043d\u0443\u0442\u0440\u0435\u043d\u043d\u0438\u0435 \u0438\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u044b.",
+      bio3: "\u041f\u043e\u043c\u0438\u043c\u043e \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f, \u044f \u043c\u0435\u043d\u0442\u043e\u0440 \u0441\u0442\u0443\u0434\u0435\u043d\u0442\u043e\u0432 \u0438 \u0432\u0435\u0434\u0443 \u0438\u0441\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u043d\u0438\u044f \u0432 \u043e\u0431\u043b\u0430\u0441\u0442\u0438 \u0430\u043b\u0433\u043e\u0440\u0438\u0442\u043c\u043e\u0432 \u0432 UNIT. \u042f \u0442\u0430\u043a\u0436\u0435 \u043f\u0440\u043e\u0432\u0451\u043b \u0441\u0435\u043c\u0435\u0441\u0442\u0440 \u0432 \u0420\u0438\u0436\u0441\u043a\u043e\u043c \u0442\u0435\u0445\u043d\u0438\u0447\u0435\u0441\u043a\u043e\u043c \u0443\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442\u0435 \u0432 \u041b\u0430\u0442\u0432\u0438\u0438.",
+      stats: {
+        years: "\u041b\u0435\u0442 \u043e\u043f\u044b\u0442\u0430",
+        companies: "\u041a\u043e\u043c\u043f\u0430\u043d\u0438\u0439",
+        languages: "\u042f\u0437\u044b\u043a\u043e\u0432",
+        skills: "\u0422\u0435\u0445\u043d\u0438\u0447\u0435\u0441\u043a\u0438\u0445 \u043d\u0430\u0432\u044b\u043a\u043e\u0432",
+      },
+    },
+    experience: {
+      index: "02.",
+      title: "\u041e\u043f\u044b\u0442 \u0440\u0430\u0431\u043e\u0442\u044b",
+      subtitle: "\u041c\u043e\u0439 \u043f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0439 \u043f\u0443\u0442\u044c \u0438 \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0438, \u0432 \u043a\u043e\u0442\u043e\u0440\u044b\u0445 \u044f \u0440\u0430\u0431\u043e\u0442\u0430\u043b.",
+    },
+    skills: {
+      index: "03.",
+      title: "\u041d\u0430\u0432\u044b\u043a\u0438 \u0438 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0438",
+      subtitle: "\u0422\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0438 \u0438 \u0438\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u044b, \u0441 \u043a\u043e\u0442\u043e\u0440\u044b\u043c\u0438 \u044f \u0440\u0430\u0431\u043e\u0442\u0430\u044e \u0435\u0436\u0435\u0434\u043d\u0435\u0432\u043d\u043e.",
+      backend: "\u0411\u044d\u043a\u0435\u043d\u0434",
+      frontend: "\u0424\u0440\u043e\u043d\u0442\u0435\u043d\u0434",
+      database: "\u0411\u0430\u0437\u044b \u0434\u0430\u043d\u043d\u044b\u0445",
+      devops: "DevOps \u0438 \u043e\u0431\u043b\u0430\u043a\u043e",
+      tools: "\u0418\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u044b \u0438 \u043c\u0435\u0442\u043e\u0434\u044b",
+      ai: "\u0418\u0418 \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435",
+    },
+    education: {
+      index: "04.",
+      title: "\u041e\u0431\u0440\u0430\u0437\u043e\u0432\u0430\u043d\u0438\u0435",
+      subtitle: "\u041c\u043e\u044f \u0430\u043a\u0430\u0434\u0435\u043c\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043f\u043e\u0434\u0433\u043e\u0442\u043e\u0432\u043a\u0430 \u0438 \u043d\u0435\u043f\u0440\u0435\u0440\u044b\u0432\u043d\u043e\u0435 \u043e\u0431\u0443\u0447\u0435\u043d\u0438\u0435.",
+      mentor: "\u041c\u0435\u043d\u0442\u043e\u0440",
+      mentorDesc:
+        "\u041c\u0435\u043d\u0442\u043e\u0440\u0441\u0442\u0432\u043e \u0441\u0442\u0443\u0434\u0435\u043d\u0442\u043e\u0432 \u0432 \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0435 \u041f\u041e, \u043f\u043e\u043c\u043e\u0449\u044c \u0441 \u043b\u0443\u0447\u0448\u0438\u043c\u0438 \u043f\u0440\u0430\u043a\u0442\u0438\u043a\u0430\u043c\u0438 \u0438 \u043a\u0430\u0440\u044c\u0435\u0440\u043d\u044b\u043c \u0440\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u043e\u043c.",
+      researcher: "\u0418\u0441\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u0442\u0435\u043b\u044c",
+      researcherDesc:
+        "\u0418\u0441\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u043d\u0438\u044f \u0432 \u043e\u0431\u043b\u0430\u0441\u0442\u0438 \u0430\u043b\u0433\u043e\u0440\u0438\u0442\u043c\u043e\u0432 \u0438 \u0432\u044b\u0447\u0438\u0441\u043b\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0439 \u0441\u043b\u043e\u0436\u043d\u043e\u0441\u0442\u0438.",
+    },
+    contact: {
+      index: "05.",
+      title: "\u0421\u0432\u044f\u0436\u0438\u0442\u0435\u0441\u044c",
+      subtitle: "\u042f \u0432\u0441\u0435\u0433\u0434\u0430 \u043e\u0442\u043a\u0440\u044b\u0442 \u0434\u043b\u044f \u0441\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u0447\u0435\u0441\u0442\u0432\u0430 \u0438 \u0438\u043d\u0442\u0435\u0440\u0435\u0441\u043d\u044b\u0445 \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432.",
+      message:
+        "\u0415\u0441\u043b\u0438 \u0443 \u0432\u0430\u0441 \u0435\u0441\u0442\u044c \u043f\u0440\u043e\u0435\u043a\u0442, \u0432\u043e\u043f\u0440\u043e\u0441 \u0438\u043b\u0438 \u043f\u0440\u043e\u0441\u0442\u043e \u0445\u043e\u0442\u0438\u0442\u0435 \u043f\u043e\u0437\u0434\u043e\u0440\u043e\u0432\u0430\u0442\u044c\u0441\u044f \u2014 \u043f\u0438\u0448\u0438\u0442\u0435! \u042f \u043f\u043e\u0441\u0442\u0430\u0440\u0430\u044e\u0441\u044c \u043e\u0442\u0432\u0435\u0442\u0438\u0442\u044c \u043a\u0430\u043a \u043c\u043e\u0436\u043d\u043e \u0441\u043a\u043e\u0440\u0435\u0435!",
+      button: "\u041d\u0430\u043f\u0438\u0441\u0430\u0442\u044c \u0432 WhatsApp",
+    },
+    footer: {
+      rights: "\u0412\u0441\u0435 \u043f\u0440\u0430\u0432\u0430 \u0437\u0430\u0449\u0438\u0449\u0435\u043d\u044b.",
+      built: "\u0421\u0434\u0435\u043b\u0430\u043d\u043e \u043d\u0430",
+      description: "Full Stack \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u0447\u0438\u043a \u0438\u0437 \u0410\u0440\u0430\u0436\u0430\u0436\u0443, \u0411\u0440\u0430\u0437\u0438\u043b\u0438\u044f. \u0421\u043e\u0437\u0434\u0430\u044e \u043c\u0430\u0441\u0448\u0442\u0430\u0431\u0438\u0440\u0443\u0435\u043c\u044b\u0435 \u0440\u0435\u0448\u0435\u043d\u0438\u044f \u0441 \u0441\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u043c\u0438 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u044f\u043c\u0438.",
+    },
+    languages: {
+      portuguese: "\u041f\u043e\u0440\u0442\u0443\u0433\u0430\u043b\u044c\u0441\u043a\u0438\u0439",
+      english: "\u0410\u043d\u0433\u043b\u0438\u0439\u0441\u043a\u0438\u0439",
+      spanish: "\u0418\u0441\u043f\u0430\u043d\u0441\u043a\u0438\u0439",
+      russian: "\u0420\u0443\u0441\u0441\u043a\u0438\u0439",
+      latvian: "\u041b\u0430\u0442\u044b\u0448\u0441\u043a\u0438\u0439",
+      native: "\u0420\u043e\u0434\u043d\u043e\u0439",
+      fluent: "\u0421\u0432\u043e\u0431\u043e\u0434\u043d\u044b\u0439",
+      intermediate: "\u0421\u0440\u0435\u0434\u043d\u0438\u0439",
+      basic: "\u0411\u0430\u0437\u043e\u0432\u044b\u0439",
+    },
+  },
+  lv: {
+    nav: {
+      home: "S\u0101kums",
+      about: "Par mani",
+      experience: "Pieredze",
+      skills: "Prasmes",
+      education: "Izgl\u012bt\u012bba",
+      contact: "Kontakti",
+    },
+    hero: {
+      badge: "Veidoju inovat\u012bvus risin\u0101jumus",
+      greeting: "Sveiki, es esmu",
+      subtitle:
+        "Full Stack izstr\u0101d\u0101t\u0101js, kas veido m\u0113rogojamus produktus ar C#/.NET, Python, React un AWS. No Araka\u017eu, Braz\u012blija.",
+      cta1: "Sazin\u0101ties",
+      cta2: "Mani darbi",
+    },
+    about: {
+      index: "01.",
+      title: "Par mani",
+      subtitle: "\u012ass ievads par to, kas es esmu un ko daru.",
+      bio1: "Kop\u0161 2018. gada es veidoju programmat\u016bru, kas atrisina re\u0101las probl\u0113mas. Tas s\u0101k\u0101s UFS (Sergi\u0070es Feder\u0101l\u0101 universit\u0101te) un \u0101tri p\u0101rauga br\u012bvm\u0101ksliniec\u012bb\u0101, darb\u0101 startup\u0101 un fintech projektos liel\u0101m Braz\u012blijas uz\u0146\u0113mumiem.",
+      bio2: "Patlaban str\u0101d\u0101ju k\u0101 Full Stack izstr\u0101d\u0101t\u0101js, nodarbojoties ar visu: no C#/.NET backend un PostgreSQL datu b\u0101z\u0113m l\u012bdz React frontend un AWS infrastrukt\u016brai. Esmu veidojis AI funkcijas, maks\u0101jumu sist\u0113mas, CI/CD konveijerus un iek\u0161\u0113jos r\u012bkus.",
+      bio3: "Bez programm\u0113\u0161anas esmu studentu mentors un veicu p\u0113t\u012bjumus algoritmu jom\u0101 UNIT. Es ar\u012b pavad\u012bju semestri R\u012bgas Tehniskaj\u0101 universit\u0101t\u0113 Latvij\u0101.",
+      stats: {
+        years: "Gadu pieredze",
+        companies: "Uz\u0146\u0113mumi",
+        languages: "Valodas",
+        skills: "Tehnisk\u0101s prasmes",
+      },
+    },
+    experience: {
+      index: "02.",
+      title: "Pieredze",
+      subtitle: "Mans profesion\u0101lais ce\u013c\u0161 un uz\u0146\u0113mumi, kuros esmu str\u0101d\u0101jis.",
+    },
+    skills: {
+      index: "03.",
+      title: "Prasmes un tehnolo\u0123ijas",
+      subtitle: "Tehnolo\u0123ijas un r\u012bki, ar kuriem str\u0101d\u0101ju ikdien\u0101.",
+      backend: "Backend",
+      frontend: "Frontend",
+      database: "Datu b\u0101zes",
+      devops: "DevOps un m\u0101konis",
+      tools: "R\u012bki un metodes",
+      ai: "MI un test\u0113\u0161ana",
+    },
+    education: {
+      index: "04.",
+      title: "Izgl\u012bt\u012bba",
+      subtitle: "Mana akad\u0113misk\u0101 sagatavot\u012bba un nep\u0101rtraukta m\u0101c\u012b\u0161an\u0101s.",
+      mentor: "Mentors",
+      mentorDesc:
+        "Studentu mentor\u0113\u0161ana programmat\u016bras izstr\u0101d\u0113, pal\u012bdzot ar lab\u0101ko praksi un projektu izstr\u0101di.",
+      researcher: "P\u0113tnieks",
+      researcherDesc:
+        "P\u0113t\u012bjumi algoritmu un skait\u013co\u0161anas sare\u017e\u0123\u012bt\u012bbas jom\u0101.",
+    },
+    contact: {
+      index: "05.",
+      title: "Sazin\u0101simies",
+      subtitle: "Esmu vienm\u0113r atv\u0113rts sadarb\u012bbai un interesan\u0074iem projektiem.",
+      message:
+        "Ja jums ir projekts, jaut\u0101jums vai vienk\u0101r\u0161i v\u0113laties pasveicin\u0101t \u2014 rakstiet! Es cen\u0074\u012b\u0161os atbild\u0113t p\u0113c iesp\u0113jas \u0101tr\u0101k!",
+      button: "Rakst\u012bt WhatsApp",
+    },
+    footer: {
+      rights: "Visas ties\u012bbas aizsarg\u0101tas.",
+      built: "Veidots ar",
+      description: "Full Stack izstr\u0101d\u0101t\u0101js no Araka\u017eu, Braz\u012blija. Veidoju m\u0113rogojamus risin\u0101jumus ar m\u016bsdienu tehnolo\u0123ij\u0101m.",
+    },
+    languages: {
+      portuguese: "Portu\u0123\u0101\u013cu",
+      english: "Ang\u013cu",
+      spanish: "Sp\u0101\u0146u",
+      russian: "Krievu",
+      latvian: "Latvie\u0161u",
+      native: "Dzimt\u0101",
+      fluent: "Br\u012bva",
+      intermediate: "Vid\u0113js",
+      basic: "Pamat\u0101",
+    },
+  },
+};
+
+export type Translations = (typeof t)["en"];
+
+export function getTranslations(locale: Locale): Translations {
+  return t[locale];
+}
