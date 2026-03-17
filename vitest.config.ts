@@ -9,6 +9,12 @@ export default defineConfig({
     setupFiles: "./src/__tests__/setup.ts",
     globals: true,
     css: false,
+    coverage: {
+      provider: "v8",
+      include: ["src/lib/**", "src/components/**"],
+      exclude: ["src/__tests__/**", "src/components/HeroScene.tsx", "src/components/ClickRipple.tsx"],
+      reporter: ["text", "text-summary"],
+    },
   },
   resolve: {
     alias: {

@@ -93,3 +93,18 @@ a, button, [role="button"], input[type="submit"], select, [tabindex]:not([tabind
     transform: translateY(0);
   }
 }
+
+/* Loading screen */
+@keyframes logoEntry {
+  from {
+    transform: scale(0) rotate(-180deg);
+  }
+  to {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes progressFill {
+  from { width: 0%; }
+  to { width: 100%; }
+}

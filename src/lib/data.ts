@@ -57,7 +57,7 @@ export const experiences = [
     period: "Jun 2023 - Sep 2025",
     location: "S\u00e3o Paulo, Brazil (Remote)",
     description:
-      "Developed and maintained platforms (EZ, DocStudios, Instituto Terra) serving 30,000+ users using Django/Python and Vue.js with JavaScript/TypeScript. Integrated third-party services like Sebrae, ensuring effective communication between RESTful APIs and internal systems. Implemented unit and E2E automated tests with Selenium, simulating real user interactions to ensure quality and robustness. Managed async tasks and scheduled processes using Celery with Redis, improving application scalability and performance. Acted as tech lead, organizing sprints, mentoring team members, and ensuring on-time deliveries with quality. Performed significant refactoring of legacy code applying Design Patterns and SOLID principles, increasing maintainability, performance and readability. Modeled and administered production and staging databases in MySQL and PostgreSQL, including data correction and migration scripts. Used AWS services (EC2, S3, RDS) for hosting, storage and application management, ensuring high availability and scalability.",
+      "Developed and maintained platforms such as EZ, DocStudios and Instituto Terra with 30,000+ users, using Django with Python and Vue.js with JavaScript/TypeScript. Integrated third-party services like Sebrae, ensuring effective communication between RESTful APIs and internal systems. Implemented unit and E2E automated tests with Selenium, simulating real user interactions to ensure quality and robustness. Managed async tasks and process scheduling using Celery with Redis, improving application scalability and performance. Acted as tech lead on projects, organizing sprints, mentoring team members and ensuring on-time deliveries with quality. Performed significant refactoring of legacy code applying Design Patterns and SOLID principles, increasing maintainability, performance and readability. Modeled and administered production and staging databases in MySQL and PostgreSQL, including data correction and migration scripts. Used AWS services (EC2, S3, RDS) for hosting, storage and application management, ensuring high availability and scalability.",
     techs: [
       "Django",
       "Python",
@@ -76,11 +76,11 @@ export const experiences = [
   {
     company: "Apoio Fiel",
     role: "Backend Developer",
-    type: "Contract \u00b7 Porto Digital",
+    type: "Porto Digital Partnership",
     period: "Jan 2024 - Jun 2024",
     location: "Aracaju, Brazil",
     description:
-      "Apoio Fiel is a solution that helps NGOs manage their donations. Developed the API using Express with best practices to ensure a scalable and maintainable architecture. Modeled and managed the database with Prisma ORM, optimizing queries and data integrity. Documented API endpoints with Swagger, facilitating team communication and integration with external systems. Led the technical team, coordinating tasks, reviewing code and promoting development best practices.",
+      "Apoio Fiel is a solution that helps other NGOs manage their donations. Developed the API using Express, applying best practices to ensure a scalable and maintainable architecture. Modeled and managed the database with Prisma ORM, optimizing queries and data integrity. Documented API endpoints with Swagger, facilitating team communication and integration with external systems. Led the technical team, coordinating tasks, reviewing code and promoting development best practices.",
     techs: [
       "Node.js",
       "Express",
@@ -98,7 +98,7 @@ export const experiences = [
     period: "Jan 2024 - Apr 2024",
     location: "Remote",
     description:
-      "Sinqia is a financial technology company integrated with banking systems. Developed pages and components using Angular, applying best practices to ensure performance and scalability. Managed tasks and demands using agile methodologies, ensuring deadline compliance while maintaining team communication.",
+      "Sinqia is a company in the financial segment integrated with banks. Developed pages and components using Angular, applying best practices to ensure performance and scalability. Managed tasks and demands using agile methodologies, ensuring deadline compliance while maintaining team communication.",
     techs: ["Angular", "SASS", "TypeScript", "RxJS", "Jasmine", "REST APIs"],
   },
   {
@@ -108,7 +108,7 @@ export const experiences = [
     period: "Jul 2023 - Dec 2023",
     location: "Aracaju, Brazil",
     description:
-      "Redesigned Magister, the main academic platform used by UNIT, in partnership with Porto Digital, focusing on improved usability, performance and responsiveness. Led the team, organizing tasks, promoting best practices and ensuring on-time deliveries. Developed interfaces using React, JavaScript and TypeScript. Managed code versioning with Git, ensuring rigorous version control, code reviews and continuous integration.",
+      "Grupo Tiradentes is a company in the higher education segment. In partnership with Porto Digital, redesigned Magister, the system used by UNIT, focusing on improved usability, performance and responsiveness. Led the team, organizing tasks, promoting best practices and ensuring on-time deliveries. Developed interfaces using React, JavaScript and TypeScript. Managed code versioning using Git, ensuring rigorous version control, code reviews and continuous integration.",
     techs: [
       "React",
       "TypeScript",
@@ -122,10 +122,10 @@ export const experiences = [
     company: "Workana (Freelance)",
     role: "Freelance Developer",
     type: "Freelance",
-    period: "Jan 2021 - Dec 2022",
+    period: "Jan 2020 - Dec 2021",
     location: "Remote",
     description:
-      "Built responsive web applications using React, Next.js and Tailwind CSS, delivering modern and performant interfaces. Collaborated directly with clients to understand their needs, proposing scalable and customized technical solutions for each business. Integrated RESTful and GraphQL APIs for efficient front-end and back-end communication. Implemented unit tests to ensure application quality and stability.",
+      "Workana is a company that connects freelancers to businesses or individuals. Developed responsive web applications using React, Next.js and Tailwind CSS, delivering modern and performant interfaces. Collaborated directly with clients to understand their needs, proposing scalable and customized technical solutions for each business. Integrated RESTful and GraphQL APIs for efficient front-end and back-end communication. Implemented unit tests to ensure application quality and stability.",
     techs: [
       "React",
       "Next.js",
