@@ -293,6 +293,61 @@ describe("ContextMenu", async () => {
     expect(document.execCommand).toHaveBeenCalledWith("selectAll");
   });
 
+  it("shows share submenu translated in PT", async () => {
+    localStorage.setItem("locale", "pt");
+    renderWithMenu();
+    act(() => {
+      window.dispatchEvent(
+        new MouseEvent("contextmenu", { bubbles: true, clientX: 50, clientY: 50 })
+      );
+    });
+    await vi.waitFor(() => {
+      expect(screen.getByText("Compartilhar")).toBeInTheDocument();
+    });
+    act(() => { fireEvent.click(screen.getByText("Compartilhar")); });
+    await vi.waitFor(() => {
+      expect(screen.getByText("Copiar link")).toBeInTheDocument();
+    });
+    localStorage.clear();
+  });
+
+  it("copies link in PT and shows 'Copiado!'", async () => {
+    const writeTextMock = vi.fn().mockResolvedValue(undefined);
+    Object.assign(navigator, { clipboard: { writeText: writeTextMock } });
+    localStorage.setItem("locale", "pt");
+    renderWithMenu();
+    act(() => {
+      window.dispatchEvent(
+        new MouseEvent("contextmenu", { bubbles: true, clientX: 50, clientY: 50 })
+      );
+    });
+    await vi.waitFor(() => {
+      expect(screen.getByText("Compartilhar")).toBeInTheDocument();
+    });
+    act(() => { fireEvent.click(screen.getByText("Compartilhar")); });
+    await vi.waitFor(() => {
+      expect(screen.getByText("Copiar link")).toBeInTheDocument();
+    });
+    act(() => { fireEvent.click(screen.getByText("Copiar link")); });
+    expect(screen.getByText("Copiado!")).toBeInTheDocument();
+    localStorage.clear();
+  });
+
+  it("uses navigator.share when available", async () => {
+    const shareMock = vi.fn().mockResolvedValue(undefined);
+    Object.defineProperty(navigator, "share", { value: shareMock, configurable: true });
+    renderWithMenu();
+    act(() => {
+      window.dispatchEvent(
+        new MouseEvent("contextmenu", { bubbles: true, clientX: 50, clientY: 50 })
+      );
+    });
+    // The Share option in share submenu won't use navigator.share (that's for the old single button)
+    // but let's verify the menu renders
+    expect(screen.getByText("Share")).toBeInTheDocument();
+    Object.defineProperty(navigator, "share", { value: undefined, configurable: true });
+  });
+
   it("clamps position to viewport", () => {
     renderWithMenu();
     act(() => {

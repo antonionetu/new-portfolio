@@ -11,7 +11,7 @@ export default function About() {
   const t = getTranslations(locale);
 
   const stats = [
-    { value: "5+", label: t.about.stats.years },
+    { value: "6+", label: t.about.stats.years },
     { value: "10+", label: t.about.stats.companies },
     { value: "5", label: t.about.stats.languages },
   ];

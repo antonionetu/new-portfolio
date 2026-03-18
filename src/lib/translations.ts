@@ -47,7 +47,7 @@ const t = {
       },
       roles: {
         atos: "Developer",
-        vox: "Full Stack Developer",
+        vox: "Mid-Level Full Stack Developer",
         quantum: "Full Stack Developer",
         apoio: "Backend Developer",
         sinqia: "Frontend Developer",
@@ -172,7 +172,7 @@ const t = {
       },
       roles: {
         atos: "Desenvolvedor",
-        vox: "Desenvolvedor Full Stack",
+        vox: "Desenvolvedor Full Stack Pleno",
         quantum: "Desenvolvedor Full Stack",
         apoio: "Desenvolvedor Back-end",
         sinqia: "Desenvolvedor Front-end",
@@ -291,7 +291,7 @@ const t = {
       },
       roles: {
         atos: "Desarrollador",
-        vox: "Desarrollador Full Stack",
+        vox: "Desarrollador Full Stack Semi-Senior",
         quantum: "Desarrollador Full Stack",
         apoio: "Desarrollador Back-end",
         sinqia: "Desarrollador Front-end",

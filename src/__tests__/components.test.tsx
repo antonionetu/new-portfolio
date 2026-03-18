@@ -121,7 +121,7 @@ describe("About", async () => {
   it("renders stats with 10+ companies", () => {
     withI18n(About);
     expect(screen.getByText("10+")).toBeInTheDocument();
-    expect(screen.getByText("5+")).toBeInTheDocument();
+    expect(screen.getByText("6+")).toBeInTheDocument();
   });
 });
 
@@ -140,34 +140,40 @@ describe("Experience", async () => {
     expect(container.innerHTML).toContain("Porto Digital Partnership");
   });
 
-  it("uses translated descriptions when available (PT)", () => {
+  it("uses translated descriptions when available (PT)", async () => {
     localStorage.setItem("locale", "pt");
     const { container } = withI18n(Experience);
-    // PT has translated descriptions - should show PT text for Quantum
-    expect(container.innerHTML).toContain("Quantum Educ.");
+    await vi.waitFor(() => {
+      expect(container.innerHTML).toContain("Quantum Educ.");
+    });
     localStorage.clear();
   });
 
-  it("falls back to English descriptions when translation is empty", () => {
+  it("falls back to English descriptions when translation is empty", async () => {
     localStorage.setItem("locale", "ru");
     const { container } = withI18n(Experience);
-    // RU has empty descriptions, should fallback to EN data
-    expect(container.innerHTML).toContain("Atos Capital");
+    await vi.waitFor(() => {
+      // RU locale loaded but descriptions empty, fallback to EN
+      expect(container.innerHTML).toContain("Atos Capital");
+    });
     localStorage.clear();
   });
 
-  it("uses translated roles when available (PT)", () => {
+  it("uses translated roles when available (PT)", async () => {
     localStorage.setItem("locale", "pt");
     const { container } = withI18n(Experience);
-    expect(container.innerHTML).toContain("Desenvolvedor Full Stack");
+    await vi.waitFor(() => {
+      expect(container.innerHTML).toContain("Desenvolvedor Full Stack Pleno");
+    });
     localStorage.clear();
   });
 
-  it("falls back to English roles when translation is empty", () => {
+  it("falls back to English roles when translation is empty", async () => {
     localStorage.setItem("locale", "lv");
     const { container } = withI18n(Experience);
-    // LV has empty roles, should fallback to EN data
-    expect(container.innerHTML).toContain("Developer");
+    await vi.waitFor(() => {
+      expect(container.innerHTML).toContain("Developer");
+    });
     localStorage.clear();
   });
 
@@ -176,8 +182,9 @@ describe("Experience", async () => {
     const { container } = withI18n(Experience);
     await vi.waitFor(() => {
       expect(container.innerHTML).toContain("Parceria Porto Digital");
-      expect(container.innerHTML).toContain("Tempo integral");
     });
+    expect(container.innerHTML).toContain("Tempo integral");
+    expect(container.innerHTML).toContain("Terceirizado");
     localStorage.clear();
   });
 
@@ -193,9 +200,24 @@ describe("Experience", async () => {
   it("falls back to English types when translation empty", () => {
     localStorage.setItem("locale", "lv");
     const { container } = withI18n(Experience);
-    // LV types exist, should translate
     expect(container.innerHTML).toContain("Porto Digital");
     localStorage.clear();
+  });
+
+  it("shows Freelance type", () => {
+    const { container } = withI18n(Experience);
+    expect(container.innerHTML).toContain("Freelance");
+  });
+
+  it("shows Outsourced type", () => {
+    const { container } = withI18n(Experience);
+    expect(container.innerHTML).toContain("Outsourced");
+  });
+
+  it("keeps Present in EN", () => {
+    localStorage.clear();
+    const { container } = withI18n(Experience);
+    expect(container.innerHTML).toContain("Present");
   });
 });
 
@@ -253,9 +275,10 @@ describe("Education", async () => {
     localStorage.setItem("locale", "pt");
     const { container } = withI18n(Education);
     await vi.waitFor(() => {
-      expect(container.innerHTML).toContain("Bacharelado");
-      expect(container.innerHTML).toContain("Bachelor\u2019s - Computer Systems");
+      expect(container.innerHTML).toContain("Bacharelado - Ci\u00eancia da Computa\u00e7\u00e3o");
     });
+    // RTU stays in English
+    expect(container.innerHTML).toContain("Bachelor\u2019s - Computer Systems");
     localStorage.clear();
   });
 });

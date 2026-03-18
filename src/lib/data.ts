@@ -31,7 +31,7 @@ export const experiences = [
   {
     key: "vox",
     company: "Vox",
-    role: "Full Stack Developer",
+    role: "Mid-Level Full Stack Developer",
     type: "Full-time",
     period: "Sep 2025 - Present",
     location: "Aracaju, Brazil",
