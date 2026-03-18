@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach, vi } from "vitest";
-import { render, screen, act } from "@testing-library/react";
+import { render, screen, act, waitFor } from "@testing-library/react";
 import { I18nProvider, useI18n, localeConfig } from "@/lib/i18n";
 
 function TestConsumer() {
@@ -28,28 +28,33 @@ describe("localeConfig", () => {
 describe("I18nProvider", () => {
   beforeEach(() => {
     localStorage.clear();
+    Object.defineProperty(navigator, "language", { value: "en-US", configurable: true });
   });
 
-  it("defaults to 'en' when no locale is saved", () => {
+  it("defaults to 'en' when no locale is saved", async () => {
     render(
       <I18nProvider>
         <TestConsumer />
       </I18nProvider>
     );
-    expect(screen.getByTestId("locale").textContent).toBe("en");
+    await waitFor(() => {
+      expect(screen.getByTestId("locale").textContent).toBe("en");
+    });
   });
 
-  it("reads saved locale from localStorage", () => {
+  it("reads saved locale from localStorage", async () => {
     localStorage.setItem("locale", "pt");
     render(
       <I18nProvider>
         <TestConsumer />
       </I18nProvider>
     );
-    expect(screen.getByTestId("locale").textContent).toBe("pt");
+    await waitFor(() => {
+      expect(screen.getByTestId("locale").textContent).toBe("pt");
+    });
   });
 
-  it("switches locale and persists to localStorage", () => {
+  it("switches locale and persists to localStorage", async () => {
     render(
       <I18nProvider>
         <TestConsumer />
@@ -62,68 +67,75 @@ describe("I18nProvider", () => {
     expect(localStorage.getItem("locale")).toBe("pt");
   });
 
-  it("ignores invalid saved locale and defaults to 'en'", () => {
+  it("ignores invalid saved locale and defaults to 'en'", async () => {
     localStorage.setItem("locale", "xx");
     render(
       <I18nProvider>
         <TestConsumer />
       </I18nProvider>
     );
-    expect(screen.getByTestId("locale").textContent).toBe("en");
+    await waitFor(() => {
+      expect(screen.getByTestId("locale").textContent).toBe("en");
+    });
   });
 
-  it("detects browser language 'pt' and sets locale to 'pt'", () => {
+  it("detects browser language 'pt'", async () => {
     Object.defineProperty(navigator, "language", { value: "pt-BR", configurable: true });
     render(
       <I18nProvider>
         <TestConsumer />
       </I18nProvider>
     );
-    expect(screen.getByTestId("locale").textContent).toBe("pt");
-    Object.defineProperty(navigator, "language", { value: "en-US", configurable: true });
+    await waitFor(() => {
+      expect(screen.getByTestId("locale").textContent).toBe("pt");
+    });
   });
 
-  it("detects browser language 'es' and sets locale to 'es'", () => {
+  it("detects browser language 'es'", async () => {
     Object.defineProperty(navigator, "language", { value: "es-ES", configurable: true });
     render(
       <I18nProvider>
         <TestConsumer />
       </I18nProvider>
     );
-    expect(screen.getByTestId("locale").textContent).toBe("es");
-    Object.defineProperty(navigator, "language", { value: "en-US", configurable: true });
+    await waitFor(() => {
+      expect(screen.getByTestId("locale").textContent).toBe("es");
+    });
   });
 
-  it("detects browser language 'ru' and sets locale to 'ru'", () => {
+  it("detects browser language 'ru'", async () => {
     Object.defineProperty(navigator, "language", { value: "ru-RU", configurable: true });
     render(
       <I18nProvider>
         <TestConsumer />
       </I18nProvider>
     );
-    expect(screen.getByTestId("locale").textContent).toBe("ru");
-    Object.defineProperty(navigator, "language", { value: "en-US", configurable: true });
+    await waitFor(() => {
+      expect(screen.getByTestId("locale").textContent).toBe("ru");
+    });
   });
 
-  it("detects browser language 'lv' and sets locale to 'lv'", () => {
+  it("detects browser language 'lv'", async () => {
     Object.defineProperty(navigator, "language", { value: "lv-LV", configurable: true });
     render(
       <I18nProvider>
         <TestConsumer />
       </I18nProvider>
     );
-    expect(screen.getByTestId("locale").textContent).toBe("lv");
-    Object.defineProperty(navigator, "language", { value: "en-US", configurable: true });
+    await waitFor(() => {
+      expect(screen.getByTestId("locale").textContent).toBe("lv");
+    });
   });
 
-  it("defaults to 'en' for unknown browser language", () => {
+  it("defaults to 'en' for unknown browser language", async () => {
     Object.defineProperty(navigator, "language", { value: "ja-JP", configurable: true });
     render(
       <I18nProvider>
         <TestConsumer />
       </I18nProvider>
     );
-    expect(screen.getByTestId("locale").textContent).toBe("en");
-    Object.defineProperty(navigator, "language", { value: "en-US", configurable: true });
+    await waitFor(() => {
+      expect(screen.getByTestId("locale").textContent).toBe("en");
+    });
   });
 });

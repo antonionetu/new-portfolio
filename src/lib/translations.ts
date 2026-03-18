@@ -54,6 +54,13 @@ const t = {
         tiradentes: "Frontend Developer",
         workana: "Freelance Developer",
       },
+      types: {
+        "Porto Digital Partnership": "Porto Digital Partnership",
+        "Full-time": "Full-time",
+        "Outsourced": "Outsourced",
+        "Freelance": "Freelance",
+      },
+      present: "Present",
     },
     skills: {
       index: "03.",
@@ -88,6 +95,16 @@ const t = {
       message:
         "Whether you have a project in mind, a question, or just want to say hi, feel free to reach out. I\u2019ll do my best to get back to you!",
       button: "Chat on WhatsApp",
+    },
+    contextMenu: {
+      back: "Back",
+      forward: "Forward",
+      reload: "Reload",
+      copy: "Copy",
+      selectAll: "Select all",
+      copyLink: "Copy link",
+      copied: "Copied!",
+      share: "Share",
     },
     footer: {
       rights: "All rights reserved.",
@@ -162,6 +179,13 @@ const t = {
         tiradentes: "Desenvolvedor Front-end",
         workana: "Freelancer",
       },
+      types: {
+        "Porto Digital Partnership": "Parceria Porto Digital",
+        "Full-time": "Tempo integral",
+        "Outsourced": "Terceirizado",
+        "Freelance": "Freelance",
+      },
+      present: "Atual",
     },
     skills: {
       index: "03.",
@@ -196,6 +220,16 @@ const t = {
       message:
         "Se voc\u00ea tem um projeto em mente, uma d\u00favida, ou s\u00f3 quer dizer oi, fique \u00e0 vontade para entrar em contato. Farei o meu melhor para responder!",
       button: "Chamar no WhatsApp",
+    },
+    contextMenu: {
+      back: "Voltar",
+      forward: "Avan\u00e7ar",
+      reload: "Recarregar",
+      copy: "Copiar",
+      selectAll: "Selecionar tudo",
+      copyLink: "Copiar link",
+      copied: "Copiado!",
+      share: "Compartilhar",
     },
     footer: {
       rights: "Todos os direitos reservados.",
@@ -264,6 +298,13 @@ const t = {
         tiradentes: "Desarrollador Front-end",
         workana: "Freelancer",
       },
+      types: {
+        "Porto Digital Partnership": "Asociaci\u00f3n Porto Digital",
+        "Full-time": "Tiempo completo",
+        "Outsourced": "Tercerizado",
+        "Freelance": "Freelance",
+      },
+      present: "Presente",
     },
     skills: {
       index: "03.",
@@ -298,6 +339,16 @@ const t = {
       message:
         "Si tienes un proyecto en mente, una pregunta, o solo quieres saludar, no dudes en contactarme. \u00a1Har\u00e9 lo posible por responderte!",
       button: "Chatear por WhatsApp",
+    },
+    contextMenu: {
+      back: "Atr\u00e1s",
+      forward: "Adelante",
+      reload: "Recargar",
+      copy: "Copiar",
+      selectAll: "Seleccionar todo",
+      copyLink: "Copiar enlace",
+      copied: "\u00a1Copiado!",
+      share: "Compartir",
     },
     footer: {
       rights: "Todos los derechos reservados.",
@@ -360,6 +411,13 @@ const t = {
       roles: {
         atos: "", vox: "", quantum: "", apoio: "", sinqia: "", tiradentes: "", workana: "",
       },
+      types: {
+        "Porto Digital Partnership": "\u041f\u0430\u0440\u0442\u043d\u0451\u0440\u0441\u0442\u0432\u043e Porto Digital",
+        "Full-time": "\u041f\u043e\u043b\u043d\u0430\u044f \u0437\u0430\u043d\u044f\u0442\u043e\u0441\u0442\u044c",
+        "Outsourced": "\u0410\u0443\u0442\u0441\u043e\u0440\u0441\u0438\u043d\u0433",
+        "Freelance": "\u0424\u0440\u0438\u043b\u0430\u043d\u0441",
+      },
+      present: "\u041d\u0430\u0441\u0442\u043e\u044f\u0449\u0435\u0435 \u0432\u0440\u0435\u043c\u044f",
     },
     skills: {
       index: "03.",
@@ -394,6 +452,16 @@ const t = {
       message:
         "\u0415\u0441\u043b\u0438 \u0443 \u0432\u0430\u0441 \u0435\u0441\u0442\u044c \u043f\u0440\u043e\u0435\u043a\u0442, \u0432\u043e\u043f\u0440\u043e\u0441 \u0438\u043b\u0438 \u043f\u0440\u043e\u0441\u0442\u043e \u0445\u043e\u0442\u0438\u0442\u0435 \u043f\u043e\u0437\u0434\u043e\u0440\u043e\u0432\u0430\u0442\u044c\u0441\u044f \u2014 \u043f\u0438\u0448\u0438\u0442\u0435! \u042f \u043f\u043e\u0441\u0442\u0430\u0440\u0430\u044e\u0441\u044c \u043e\u0442\u0432\u0435\u0442\u0438\u0442\u044c \u043a\u0430\u043a \u043c\u043e\u0436\u043d\u043e \u0441\u043a\u043e\u0440\u0435\u0435!",
       button: "\u041d\u0430\u043f\u0438\u0441\u0430\u0442\u044c \u0432 WhatsApp",
+    },
+    contextMenu: {
+      back: "\u041d\u0430\u0437\u0430\u0434",
+      forward: "\u0412\u043f\u0435\u0440\u0451\u0434",
+      reload: "\u041f\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044c",
+      copy: "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c",
+      selectAll: "\u0412\u044b\u0434\u0435\u043b\u0438\u0442\u044c \u0432\u0441\u0451",
+      copyLink: "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0441\u0441\u044b\u043b\u043a\u0443",
+      copied: "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e!",
+      share: "\u041f\u043e\u0434\u0435\u043b\u0438\u0442\u044c\u0441\u044f",
     },
     footer: {
       rights: "\u0412\u0441\u0435 \u043f\u0440\u0430\u0432\u0430 \u0437\u0430\u0449\u0438\u0449\u0435\u043d\u044b.",
@@ -456,6 +524,13 @@ const t = {
       roles: {
         atos: "", vox: "", quantum: "", apoio: "", sinqia: "", tiradentes: "", workana: "",
       },
+      types: {
+        "Porto Digital Partnership": "Porto Digital partner\u012bba",
+        "Full-time": "Pilna laika",
+        "Outsourced": "\u0100rpakalpojums",
+        "Freelance": "Br\u012bvm\u0101ksliniecisks",
+      },
+      present: "Pa\u0161laik",
     },
     skills: {
       index: "03.",
@@ -490,6 +565,16 @@ const t = {
       message:
         "Ja jums ir projekts, jaut\u0101jums vai vienk\u0101r\u0161i v\u0113laties pasveicin\u0101t \u2014 rakstiet! Es cen\u0074\u012b\u0161os atbild\u0113t p\u0113c iesp\u0113jas \u0101tr\u0101k!",
       button: "Rakst\u012bt WhatsApp",
+    },
+    contextMenu: {
+      back: "Atpaka\u013c",
+      forward: "Uz priek\u0161u",
+      reload: "P\u0101rl\u0101d\u0113t",
+      copy: "Kop\u0113t",
+      selectAll: "Atlasit visu",
+      copyLink: "Kop\u0113t saiti",
+      copied: "Nokop\u0113ts!",
+      share: "Kop\u012bgot",
     },
     footer: {
       rights: "Visas ties\u012bbas aizsarg\u0101tas.",

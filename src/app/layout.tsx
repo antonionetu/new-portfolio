@@ -13,6 +13,18 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: [
+      {
+        url: "/images/icon-dark.png",
+        media: "(prefers-color-scheme: dark)",
+      },
+      {
+        url: "/images/icon-light.png",
+        media: "(prefers-color-scheme: light)",
+      },
+    ],
+  },
   title: "Antonio Santana | Software Developer",
   description:
     "Full Stack Developer specializing in C#, .NET, Python, Django, React, Vue, Angular, AWS and more. Based in Aracaju, Brazil.",

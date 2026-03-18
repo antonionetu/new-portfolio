@@ -108,7 +108,7 @@ export default function Hero() {
           </a>
           <a
             href="#experience"
-            className="px-8 py-3.5 border border-brand-border hover:border-brand-purple/50 text-white font-medium rounded-xl transition-all duration-300 hover:bg-white/5 active:scale-95"
+            className="px-8 py-3.5 border border-brand-lime/40 text-brand-lime font-medium rounded-xl transition-all duration-300 hover:bg-brand-lime/10 hover:border-brand-lime/60 active:scale-95"
           >
             {t.hero.cta2}
           </a>
@@ -124,7 +124,7 @@ export default function Hero() {
               href={s.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-brand-muted hover:text-white transition-colors duration-300"
+              className="text-brand-muted hover:text-brand-lime transition-colors duration-300"
               aria-label={s.label}
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -136,20 +136,21 @@ export default function Hero() {
       </motion.div>
 
       {/* Scroll indicator */}
-      <motion.div
+      <motion.a
+        href="#about"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 group"
       >
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 rounded-full border-2 border-brand-border flex items-start justify-center p-1.5"
+          className="w-6 h-10 rounded-full border-2 border-brand-border group-hover:border-brand-lime/50 flex items-start justify-center p-1.5 transition-colors duration-300"
         >
-          <div className="w-1.5 h-1.5 rounded-full bg-brand-purple" />
+          <div className="w-1.5 h-1.5 rounded-full bg-brand-purple group-hover:bg-brand-lime transition-colors duration-300" />
         </motion.div>
-      </motion.div>
+      </motion.a>
     </section>
   );
 }

@@ -1,8 +1,18 @@
 import "@testing-library/jest-dom/vitest";
 
-// Mock IntersectionObserver
+// Mock IntersectionObserver - fires callback with isIntersecting: true
 class MockIntersectionObserver {
-  observe = vi.fn();
+  callback: IntersectionObserverCallback;
+  constructor(callback: IntersectionObserverCallback) {
+    this.callback = callback;
+  }
+  observe = vi.fn((target: Element) => {
+    // Simulate the element being visible
+    this.callback(
+      [{ target, isIntersecting: true } as IntersectionObserverEntry],
+      this as unknown as IntersectionObserver
+    );
+  });
   unobserve = vi.fn();
   disconnect = vi.fn();
 }

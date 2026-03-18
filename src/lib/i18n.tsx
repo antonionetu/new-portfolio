@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState, useCallback, ReactNode } from "react";
+import { createContext, useContext, useState, useCallback, useEffect, ReactNode } from "react";
 
 export type Locale = "en" | "pt" | "es" | "ru" | "lv";
 
@@ -22,23 +22,29 @@ const I18nContext = createContext<I18nContextType>({
   setLocale: () => {},
 });
 
+function detectLocale(): Locale {
+  const saved = localStorage.getItem("locale") as Locale;
+  if (saved && saved in localeConfig) return saved;
+  const browserLang = navigator.language.slice(0, 2);
+  if (browserLang === "pt") return "pt";
+  if (browserLang === "es") return "es";
+  if (browserLang === "ru") return "ru";
+  if (browserLang === "lv") return "lv";
+  return "en";
+}
+
 export function I18nProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>(() => {
-    if (typeof window !== "undefined") {
-      const saved = localStorage.getItem("locale") as Locale;
-      if (saved && saved in localeConfig) return saved;
-      const browserLang = navigator.language.slice(0, 2);
-      if (browserLang === "pt") return "pt";
-      if (browserLang === "es") return "es";
-      if (browserLang === "ru") return "ru";
-      if (browserLang === "lv") return "lv";
-    }
-    return "en";
-  });
+  // Always start with "en" on both server and client to avoid hydration mismatch
+  const [locale, setLocaleState] = useState<Locale>("en");
+
+  // After mount, read the real locale from localStorage/browser
+  useEffect(() => {
+    setLocaleState(detectLocale());
+  }, []);
 
   const setLocale = useCallback((l: Locale) => {
     setLocaleState(l);
-    if (typeof window !== "undefined") localStorage.setItem("locale", l);
+    localStorage.setItem("locale", l);
   }, []);
 
   return (

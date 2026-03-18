@@ -3,6 +3,7 @@
 import { I18nProvider } from "@/lib/i18n";
 import LoadingScreen from "@/components/LoadingScreen";
 import ClickRipple from "@/components/ClickRipple";
+import ContextMenu from "@/components/ContextMenu";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -17,6 +18,7 @@ export default function Home() {
     <I18nProvider>
       <LoadingScreen />
       <ClickRipple />
+      <ContextMenu />
       <Navbar />
       <main>
         <Hero />

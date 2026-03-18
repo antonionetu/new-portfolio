@@ -44,12 +44,12 @@ export default function Experience() {
                         {exp.company}
                         <span className="text-brand-muted font-normal">
                           {" "}
-                          &middot; {exp.type}
+                          &middot; {(t.experience as any).types?.[exp.type] || exp.type}
                         </span>
                       </p>
                     </div>
                     <div className="text-sm text-brand-muted font-mono shrink-0">
-                      {exp.period}
+                      {exp.period.replace("Present", (t.experience as any).present || "Present")}
                     </div>
                   </div>
 

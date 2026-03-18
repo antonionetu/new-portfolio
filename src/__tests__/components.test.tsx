@@ -20,21 +20,17 @@ vi.mock("next/dynamic", () => ({
 }));
 
 // Mock framer-motion to avoid animation complexity
+const motionProxy = (tag: string) => {
+  const Component = ({ children, ...props }: Record<string, unknown>) => {
+    const Tag = tag as any;
+    return <Tag {...props}>{children as React.ReactNode}</Tag>;
+  };
+  Component.displayName = `motion.${tag}`;
+  return Component;
+};
+
 vi.mock("framer-motion", () => ({
-  motion: {
-    div: ({ children, ...props }: Record<string, unknown>) => (
-      <div {...props}>{children as React.ReactNode}</div>
-    ),
-    h1: ({ children, ...props }: Record<string, unknown>) => (
-      <h1 {...props}>{children as React.ReactNode}</h1>
-    ),
-    p: ({ children, ...props }: Record<string, unknown>) => (
-      <p {...props}>{children as React.ReactNode}</p>
-    ),
-    span: ({ children, ...props }: Record<string, unknown>) => (
-      <span {...props}>{children as React.ReactNode}</span>
-    ),
-  },
+  motion: new Proxy({}, { get: (_target, prop: string) => motionProxy(prop) }),
   AnimatePresence: ({ children }: { children: React.ReactNode }) => <>{children}</>,
 }));
 
@@ -174,6 +170,33 @@ describe("Experience", async () => {
     expect(container.innerHTML).toContain("Developer");
     localStorage.clear();
   });
+
+  it("translates experience types in PT", async () => {
+    localStorage.setItem("locale", "pt");
+    const { container } = withI18n(Experience);
+    await vi.waitFor(() => {
+      expect(container.innerHTML).toContain("Parceria Porto Digital");
+      expect(container.innerHTML).toContain("Tempo integral");
+    });
+    localStorage.clear();
+  });
+
+  it("translates 'Present' in period to PT", async () => {
+    localStorage.setItem("locale", "pt");
+    const { container } = withI18n(Experience);
+    await vi.waitFor(() => {
+      expect(container.innerHTML).toContain("Atual");
+    });
+    localStorage.clear();
+  });
+
+  it("falls back to English types when translation empty", () => {
+    localStorage.setItem("locale", "lv");
+    const { container } = withI18n(Experience);
+    // LV types exist, should translate
+    expect(container.innerHTML).toContain("Porto Digital");
+    localStorage.clear();
+  });
 });
 
 describe("Skills", async () => {
@@ -219,14 +242,21 @@ describe("Education", async () => {
     expect(screen.getByText("Undergraduate Researcher")).toBeInTheDocument();
   });
 
-  it("falls back to default degree when translation missing", () => {
-    // RU has degrees defined, but test with a locale that has degrees
-    // to ensure the fallback || works when key doesn't match
+  it("shows EN degrees by default", () => {
     localStorage.clear();
-    withI18n(Education);
-    // EN has degrees.rtu and degrees.unit, both should render
     const { container } = withI18n(Education);
-    expect(container.innerHTML).toContain("Bachelor");
+    expect(container.innerHTML).toContain("Bachelor\u2019s - Computer Science");
+    expect(container.innerHTML).toContain("Bachelor\u2019s - Computer Systems");
+  });
+
+  it("translates UNIT degree to PT but keeps RTU in English", async () => {
+    localStorage.setItem("locale", "pt");
+    const { container } = withI18n(Education);
+    await vi.waitFor(() => {
+      expect(container.innerHTML).toContain("Bacharelado");
+      expect(container.innerHTML).toContain("Bachelor\u2019s - Computer Systems");
+    });
+    localStorage.clear();
   });
 });
 
