@@ -71,4 +71,59 @@ describe("I18nProvider", () => {
     );
     expect(screen.getByTestId("locale").textContent).toBe("en");
   });
+
+  it("detects browser language 'pt' and sets locale to 'pt'", () => {
+    Object.defineProperty(navigator, "language", { value: "pt-BR", configurable: true });
+    render(
+      <I18nProvider>
+        <TestConsumer />
+      </I18nProvider>
+    );
+    expect(screen.getByTestId("locale").textContent).toBe("pt");
+    Object.defineProperty(navigator, "language", { value: "en-US", configurable: true });
+  });
+
+  it("detects browser language 'es' and sets locale to 'es'", () => {
+    Object.defineProperty(navigator, "language", { value: "es-ES", configurable: true });
+    render(
+      <I18nProvider>
+        <TestConsumer />
+      </I18nProvider>
+    );
+    expect(screen.getByTestId("locale").textContent).toBe("es");
+    Object.defineProperty(navigator, "language", { value: "en-US", configurable: true });
+  });
+
+  it("detects browser language 'ru' and sets locale to 'ru'", () => {
+    Object.defineProperty(navigator, "language", { value: "ru-RU", configurable: true });
+    render(
+      <I18nProvider>
+        <TestConsumer />
+      </I18nProvider>
+    );
+    expect(screen.getByTestId("locale").textContent).toBe("ru");
+    Object.defineProperty(navigator, "language", { value: "en-US", configurable: true });
+  });
+
+  it("detects browser language 'lv' and sets locale to 'lv'", () => {
+    Object.defineProperty(navigator, "language", { value: "lv-LV", configurable: true });
+    render(
+      <I18nProvider>
+        <TestConsumer />
+      </I18nProvider>
+    );
+    expect(screen.getByTestId("locale").textContent).toBe("lv");
+    Object.defineProperty(navigator, "language", { value: "en-US", configurable: true });
+  });
+
+  it("defaults to 'en' for unknown browser language", () => {
+    Object.defineProperty(navigator, "language", { value: "ja-JP", configurable: true });
+    render(
+      <I18nProvider>
+        <TestConsumer />
+      </I18nProvider>
+    );
+    expect(screen.getByTestId("locale").textContent).toBe("en");
+    Object.defineProperty(navigator, "language", { value: "en-US", configurable: true });
+  });
 });

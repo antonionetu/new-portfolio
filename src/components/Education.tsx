@@ -27,7 +27,7 @@ export default function Education() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.15 }}
-              className="relative p-6 rounded-2xl border border-brand-border bg-brand-card/30 hover:border-brand-lime/30 transition-all group overflow-hidden"
+              className="relative p-6 rounded-2xl border border-brand-border bg-brand-card/30 hover:border-brand-lime/30 transition-all duration-300 group overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-24 h-24 bg-brand-lime/5 rounded-bl-full" />
 
@@ -60,7 +60,7 @@ export default function Education() {
                   </h3>
                 </a>
                 <p className="text-brand-purple font-medium mt-1">
-                  {edu.degree}
+                  {(t.education as any).degrees?.[edu.key] || edu.degree}
                 </p>
                 <p className="text-sm text-brand-muted mt-2 flex items-center gap-1.5">
                   <svg

@@ -234,4 +234,71 @@ describe("Navbar", async () => {
     const header = document.querySelector("header");
     expect(header?.className).toContain("bg-transparent");
   });
+
+  it("renders translated nav in PT", () => {
+    localStorage.setItem("locale", "pt");
+    renderNavbar();
+    const homeLinks = screen.getAllByText("In\u00edcio");
+    expect(homeLinks.length).toBeGreaterThan(0);
+    localStorage.clear();
+  });
+
+  it("shows logo in mobile menu", () => {
+    renderNavbar();
+    const hamburger = screen.getByLabelText("Open menu");
+    act(() => {
+      fireEvent.click(hamburger);
+    });
+    const logos = screen.getAllByAltText("Antonio Santana");
+    expect(logos.length).toBeGreaterThanOrEqual(2); // header + mobile menu
+  });
+
+  it("toggles mobile language dropdown", () => {
+    renderNavbar();
+    // Find the mobile lang button (has flag emoji, inside md:hidden)
+    const mobileLangBtns = document.querySelectorAll(
+      ".md\\:hidden button"
+    );
+    // First button in mobile controls is the lang button
+    const mobileLangBtn = mobileLangBtns[0];
+    expect(mobileLangBtn).toBeTruthy();
+    act(() => {
+      fireEvent.click(mobileLangBtn);
+    });
+    // Dropdown should show language options
+    const ptOptions = screen.getAllByText("PT");
+    expect(ptOptions.length).toBeGreaterThan(0);
+  });
+
+  it("selects language from desktop dropdown options", () => {
+    localStorage.clear();
+    renderNavbar();
+    // Open desktop lang dropdown via stopPropagation wrapper
+    const desktopWrapper = document.querySelector(".relative.ml-2");
+    const desktopBtn = desktopWrapper?.querySelector("button");
+    expect(desktopBtn).toBeTruthy();
+    act(() => {
+      fireEvent.click(desktopBtn!);
+    });
+    // Find and click a language option inside the dropdown
+    const dropdownButtons = desktopWrapper?.querySelectorAll("button");
+    // Second button should be one of the language options
+    if (dropdownButtons && dropdownButtons.length > 1) {
+      act(() => {
+        fireEvent.click(dropdownButtons[1]);
+      });
+    }
+    expect(localStorage.getItem("locale")).toBeTruthy();
+  });
+
+  it("restores body scroll on unmount", () => {
+    const { unmount } = renderNavbar();
+    const hamburger = screen.getByLabelText("Open menu");
+    act(() => {
+      fireEvent.click(hamburger);
+    });
+    expect(document.body.style.overflow).toBe("hidden");
+    unmount();
+    expect(document.body.style.overflow).toBe("");
+  });
 });

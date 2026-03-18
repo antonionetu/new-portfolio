@@ -15,6 +15,7 @@ const t = {
       greeting: "Hi, I\u2019m",
       subtitle:
         "Full Stack Developer building scalable products with C#/.NET, Python, React & AWS. Based in Aracaju, Brazil.",
+      role: "Full Stack Developer",
       cta1: "Get in touch",
       cta2: "View my work",
     },
@@ -27,15 +28,32 @@ const t = {
       bio3: "Beyond coding, I mentor students and conduct research in algorithms at UNIT. I also spent a semester at Riga Technical University in Latvia, which gave me an international perspective on software engineering.",
       stats: {
         years: "Years of experience",
-        companies: "Companies worked",
+        companies: "Companies worked with",
         languages: "Languages spoken",
-        skills: "Technical skills",
       },
     },
     experience: {
       index: "02.",
       title: "Experience",
       subtitle: "My professional journey and the companies I\u2019ve worked with.",
+      descriptions: {
+        atos: "Working in partnership with Porto Digital on financial technology solutions. Atos Capital provides financial solutions for large ERPs including reconciliation, payments, expenses management, and credit products for enterprises across Brazil.",
+        vox: "Full stack development at an EdTech company. Building and maintaining platform features using C#/.NET and AWS services. Working with AI-powered features, payment gateway integrations, database management, CI/CD pipelines, and quality assurance processes. Mentoring junior developers and conducting weekly technical sessions.",
+        quantum: "Developed and maintained platforms such as EZ, DocStudios and Instituto Terra with 30,000+ users, using Django with Python and Vue.js with JavaScript/TypeScript. Integrated third-party services like Sebrae, ensuring effective communication between RESTful APIs and internal systems. Implemented unit and E2E automated tests with Selenium, simulating real user interactions to ensure quality and robustness. Managed async tasks and process scheduling using Celery with Redis, improving application scalability and performance. Acted as tech lead on projects, organizing sprints, mentoring team members and ensuring on-time deliveries with quality. Performed significant refactoring of legacy code applying Design Patterns and SOLID principles, increasing maintainability, performance and readability. Modeled and administered production and staging databases in MySQL and PostgreSQL, including data correction and migration scripts. Used AWS services (EC2, S3, RDS) for hosting, storage and application management, ensuring high availability and scalability.",
+        apoio: "Apoio Fiel is a solution that helps other NGOs manage their donations. Developed the API using Express, applying best practices to ensure a scalable and maintainable architecture. Modeled and managed the database with Prisma ORM, optimizing queries and data integrity. Documented API endpoints with Swagger, facilitating team communication and integration with external systems. Led the technical team, coordinating tasks, reviewing code and promoting development best practices.",
+        sinqia: "Sinqia is a company in the financial segment integrated with banks. Developed pages and components using Angular, applying best practices to ensure performance and scalability. Managed tasks and demands using agile methodologies, ensuring deadline compliance while maintaining team communication.",
+        tiradentes: "Grupo Tiradentes is a company in the higher education segment. In partnership with Porto Digital, redesigned Magister, the system used by UNIT, focusing on improved usability, performance and responsiveness. Led the team, organizing tasks, promoting best practices and ensuring on-time deliveries. Developed interfaces using React, JavaScript and TypeScript. Managed code versioning using Git, ensuring rigorous version control, code reviews and continuous integration.",
+        workana: "Workana is a company that connects freelancers to businesses or individuals. Developed responsive web applications using React, Next.js and Tailwind CSS, delivering modern and performant interfaces. Collaborated directly with clients to understand their needs, proposing scalable and customized technical solutions for each business. Integrated RESTful and GraphQL APIs for efficient front-end and back-end communication. Implemented unit tests to ensure application quality and stability.",
+      },
+      roles: {
+        atos: "Developer",
+        vox: "Full Stack Developer",
+        quantum: "Full Stack Developer",
+        apoio: "Backend Developer",
+        sinqia: "Frontend Developer",
+        tiradentes: "Frontend Developer",
+        workana: "Freelance Developer",
+      },
     },
     skills: {
       index: "03.",
@@ -52,6 +70,10 @@ const t = {
       index: "04.",
       title: "Education",
       subtitle: "My academic background and continuous learning.",
+      degrees: {
+        rtu: "Bachelor\u2019s - Computer Systems",
+        unit: "Bachelor\u2019s - Computer Science",
+      },
       mentor: "Mentor",
       mentorDesc:
         "Mentoring students in software development, helping with best practices, career guidance, and hands-on projects.",
@@ -71,6 +93,9 @@ const t = {
       rights: "All rights reserved.",
       built: "Built with",
       description: "Full Stack Developer from Aracaju, Brazil. Building scalable solutions with modern technologies.",
+      links: "Links",
+      contactTitle: "Contact",
+      sourceCode: "Source code",
     },
     languages: {
       portuguese: "Portuguese",
@@ -98,6 +123,7 @@ const t = {
       greeting: "Ol\u00e1, eu sou",
       subtitle:
         "Desenvolvedor Full Stack criando produtos escal\u00e1veis com C#/.NET, Python, React e AWS. De Aracaju, Brasil.",
+      role: "Desenvolvedor Full Stack",
       cta1: "Entre em contato",
       cta2: "Veja meu trabalho",
     },
@@ -110,15 +136,32 @@ const t = {
       bio3: "Al\u00e9m de programar, sou mentor de estudantes e conduzo pesquisas em algoritmos na UNIT. Tamb\u00e9m passei um semestre na Riga Technical University na Let\u00f4nia, o que me deu uma perspectiva internacional sobre engenharia de software.",
       stats: {
         years: "Anos de experi\u00eancia",
-        companies: "Projetos realizados",
+        companies: "Empresas trabalhadas",
         languages: "Idiomas falados",
-        skills: "Habilidades t\u00e9cnicas",
       },
     },
     experience: {
       index: "02.",
       title: "Experi\u00eancia",
       subtitle: "Minha jornada profissional e as empresas onde trabalhei.",
+      descriptions: {
+        atos: "Trabalhando em parceria com o Porto Digital em solu\u00e7\u00f5es de tecnologia financeira. A Atos Capital fornece solu\u00e7\u00f5es financeiras para grandes ERPs incluindo concilia\u00e7\u00e3o, pagamentos, gest\u00e3o de despesas e produtos de cr\u00e9dito para empresas em todo o Brasil.",
+        vox: "Desenvolvimento full stack em uma empresa de EdTech. Construindo e mantendo funcionalidades da plataforma utilizando C#/.NET e servi\u00e7os da AWS. Trabalhando com funcionalidades de IA, integra\u00e7\u00f5es de gateway de pagamento, gest\u00e3o de banco de dados, pipelines CI/CD e processos de qualidade. Orientando desenvolvedores menos experientes e conduzindo sess\u00f5es t\u00e9cnicas semanais.",
+        quantum: "A empresa Quantum Educ. \u00e9 uma startup no segmento da educa\u00e7\u00e3o. Desenvolvi e mantive plataformas como EZ, DocStudios e Instituto Terra com 30.000+ usu\u00e1rios, utilizando tecnologias como Django com Python e Vue.js com JavaScript/TypeScript. Integrei servi\u00e7os de terceiros como o Sebrae, garantindo comunica\u00e7\u00e3o eficaz entre APIs RESTful e sistemas internos. Implementei testes unit\u00e1rios e testes automatizados de E2E com Selenium, simulando intera\u00e7\u00f5es reais dos usu\u00e1rios para garantir qualidade e robustez. Gerenciei tarefas ass\u00edncronas e agendamentos de processos utilizando Celery com Redis, melhorando a escalabilidade e desempenho das aplica\u00e7\u00f5es. Atuei como l\u00edder t\u00e9cnico em projetos, organizando sprints, orientando membros da equipe e garantindo entregas dentro dos prazos com qualidade. Realizei refatora\u00e7\u00f5es significativas em c\u00f3digo legado, aplicando princ\u00edpios de Design Patterns e SOLID, aumentando a manutenibilidade, performance e legibilidade do sistema. Modelei e administrei o banco de dados de produ\u00e7\u00e3o e homologa\u00e7\u00e3o em MySQL e PostgreSQL efetuando tamb\u00e9m scripts para corre\u00e7\u00e3o ou adi\u00e7\u00e3o de informa\u00e7\u00f5es. Utilizei servi\u00e7os da AWS (como EC2, S3 e RDS) para hospedagem, armazenamento e gerenciamento das aplica\u00e7\u00f5es, garantindo alta disponibilidade e escalabilidade.",
+        apoio: "A ONG Apoio Fiel \u00e9 uma solu\u00e7\u00e3o que ajuda outras ONGs a gerenciar suas doa\u00e7\u00f5es. Desenvolvi a API utilizando Express, utilizando boas pr\u00e1ticas para garantir uma arquitetura escal\u00e1vel e de f\u00e1cil manuten\u00e7\u00e3o. Modelei e gerenciei o banco de dados com Prisma ORM, otimizando consultas e integridade dos dados. Documentei os endpoints da API com Swagger, facilitando a comunica\u00e7\u00e3o entre os membros da equipe e a integra\u00e7\u00e3o com sistemas externos. Atuei na lideran\u00e7a t\u00e9cnica de equipe, coordenando tarefas, revisando c\u00f3digos e promovendo boas pr\u00e1ticas de desenvolvimento.",
+        sinqia: "A Sinqia \u00e9 uma empresa no segmento financeiro que \u00e9 integrada em bancos. Desenvolvi p\u00e1ginas e componentes utilizando Angular, aplicando boas pr\u00e1ticas para garantir performance e escalabilidade. Gerenciei tarefas e demandas utilizando metodologias \u00e1geis, assegurando cumprimento dos prazos mantendo a comunica\u00e7\u00e3o em equipe.",
+        tiradentes: "O Grupo Tiradentes \u00e9 uma empresa no segmento da educa\u00e7\u00e3o superior. Em parceria com o Porto Digital, reformulamos o Magister, sistema utilizado pela UNIT, com foco em melhoria da usabilidade, performance e responsividade. Atuei na lideran\u00e7a de equipe, organizando tarefas, promovendo boas pr\u00e1ticas e garantindo entregas dentro dos prazos estabelecidos. Desenvolvi interfaces utilizando React, JavaScript e TypeScript. Gerenciando o versionamento do c\u00f3digo utilizando GIT, garantindo controle rigoroso das vers\u00f5es, revis\u00e3o de c\u00f3digo e integra\u00e7\u00e3o cont\u00ednua.",
+        workana: "A empresa Workana \u00e9 uma empresa que conecta freelancers a empresas ou indiv\u00edduos. Desenvolvi aplica\u00e7\u00f5es web responsivas utilizando React, Next e Tailwind CSS, garantindo interfaces modernas e perform\u00e1ticas. Colaborei diretamente com os clientes para entender suas necessidades, propondo solu\u00e7\u00f5es t\u00e9cnicas escal\u00e1veis e personalizadas para cada neg\u00f3cio. Integrei APIs RESTful e GraphQL para comunica\u00e7\u00e3o eficiente entre front-end e back-end. Implementei testes unit\u00e1rios para garantir a qualidade e estabilidade das aplica\u00e7\u00f5es.",
+      },
+      roles: {
+        atos: "Desenvolvedor",
+        vox: "Desenvolvedor Full Stack",
+        quantum: "Desenvolvedor Full Stack",
+        apoio: "Desenvolvedor Back-end",
+        sinqia: "Desenvolvedor Front-end",
+        tiradentes: "Desenvolvedor Front-end",
+        workana: "Freelancer",
+      },
     },
     skills: {
       index: "03.",
@@ -135,6 +178,10 @@ const t = {
       index: "04.",
       title: "Educa\u00e7\u00e3o",
       subtitle: "Minha forma\u00e7\u00e3o acad\u00eamica e aprendizado cont\u00ednuo.",
+      degrees: {
+        rtu: "Bachelor\u2019s - Computer Systems",
+        unit: "Bacharelado - Ci\u00eancia da Computa\u00e7\u00e3o",
+      },
       mentor: "Mentor",
       mentorDesc:
         "Mentoria de estudantes em desenvolvimento de software, ajudando com boas pr\u00e1ticas, orienta\u00e7\u00e3o de carreira e projetos pr\u00e1ticos.",
@@ -154,6 +201,9 @@ const t = {
       rights: "Todos os direitos reservados.",
       built: "Feito com",
       description: "Desenvolvedor Full Stack de Aracaju, Brasil. Construindo solu\u00e7\u00f5es escal\u00e1veis com tecnologias modernas.",
+      links: "Links",
+      contactTitle: "Contato",
+      sourceCode: "C\u00f3digo fonte",
     },
     languages: {
       portuguese: "Portugu\u00eas",
@@ -181,6 +231,7 @@ const t = {
       greeting: "Hola, soy",
       subtitle:
         "Desarrollador Full Stack creando productos escalables con C#/.NET, Python, React y AWS. De Aracaju, Brasil.",
+      role: "Desarrollador Full Stack",
       cta1: "Cont\u00e1ctame",
       cta2: "Ver mi trabajo",
     },
@@ -193,15 +244,26 @@ const t = {
       bio3: "Adem\u00e1s de programar, soy mentor de estudiantes y realizo investigaciones en algoritmos en la UNIT. Tambi\u00e9n pas\u00e9 un semestre en la Riga Technical University en Letonia, lo que me dio una perspectiva internacional sobre ingenier\u00eda de software.",
       stats: {
         years: "A\u00f1os de experiencia",
-        companies: "Empresas",
+        companies: "Empresas trabajadas",
         languages: "Idiomas hablados",
-        skills: "Habilidades t\u00e9cnicas",
       },
     },
     experience: {
       index: "02.",
       title: "Experiencia",
       subtitle: "Mi trayectoria profesional y las empresas donde trabaj\u00e9.",
+      descriptions: {
+        atos: "", vox: "", quantum: "", apoio: "", sinqia: "", tiradentes: "", workana: "",
+      },
+      roles: {
+        atos: "Desarrollador",
+        vox: "Desarrollador Full Stack",
+        quantum: "Desarrollador Full Stack",
+        apoio: "Desarrollador Back-end",
+        sinqia: "Desarrollador Front-end",
+        tiradentes: "Desarrollador Front-end",
+        workana: "Freelancer",
+      },
     },
     skills: {
       index: "03.",
@@ -218,6 +280,10 @@ const t = {
       index: "04.",
       title: "Educaci\u00f3n",
       subtitle: "Mi formaci\u00f3n acad\u00e9mica y aprendizaje continuo.",
+      degrees: {
+        rtu: "Bachelor\u2019s - Computer Systems",
+        unit: "Bachillerato - Ciencias de la Computaci\u00f3n",
+      },
       mentor: "Mentor",
       mentorDesc:
         "Mentor\u00eda a estudiantes en desarrollo de software, ayud\u00e1ndoles con buenas pr\u00e1cticas, orientaci\u00f3n de carrera y proyectos pr\u00e1cticos.",
@@ -237,6 +303,9 @@ const t = {
       rights: "Todos los derechos reservados.",
       built: "Hecho con",
       description: "Desarrollador Full Stack de Aracaju, Brasil. Construyendo soluciones escalables con tecnolog\u00edas modernas.",
+      links: "Enlaces",
+      contactTitle: "Contacto",
+      sourceCode: "C\u00f3digo fuente",
     },
     languages: {
       portuguese: "Portugu\u00e9s",
@@ -264,6 +333,7 @@ const t = {
       greeting: "\u041f\u0440\u0438\u0432\u0435\u0442, \u044f",
       subtitle:
         "Full Stack \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u0447\u0438\u043a, \u0441\u043e\u0437\u0434\u0430\u044e\u0449\u0438\u0439 \u043c\u0430\u0441\u0448\u0442\u0430\u0431\u0438\u0440\u0443\u0435\u043c\u044b\u0435 \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u044b \u043d\u0430 C#/.NET, Python, React \u0438 AWS. \u0418\u0437 \u0410\u0440\u0430\u0436\u0430\u0436\u0443, \u0411\u0440\u0430\u0437\u0438\u043b\u0438\u044f.",
+      role: "Full Stack \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u0447\u0438\u043a",
       cta1: "\u0421\u0432\u044f\u0437\u0430\u0442\u044c\u0441\u044f",
       cta2: "\u041c\u043e\u0438 \u0440\u0430\u0431\u043e\u0442\u044b",
     },
@@ -276,15 +346,20 @@ const t = {
       bio3: "\u041f\u043e\u043c\u0438\u043c\u043e \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f, \u044f \u043c\u0435\u043d\u0442\u043e\u0440 \u0441\u0442\u0443\u0434\u0435\u043d\u0442\u043e\u0432 \u0438 \u0432\u0435\u0434\u0443 \u0438\u0441\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u043d\u0438\u044f \u0432 \u043e\u0431\u043b\u0430\u0441\u0442\u0438 \u0430\u043b\u0433\u043e\u0440\u0438\u0442\u043c\u043e\u0432 \u0432 UNIT. \u042f \u0442\u0430\u043a\u0436\u0435 \u043f\u0440\u043e\u0432\u0451\u043b \u0441\u0435\u043c\u0435\u0441\u0442\u0440 \u0432 \u0420\u0438\u0436\u0441\u043a\u043e\u043c \u0442\u0435\u0445\u043d\u0438\u0447\u0435\u0441\u043a\u043e\u043c \u0443\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442\u0435 \u0432 \u041b\u0430\u0442\u0432\u0438\u0438.",
       stats: {
         years: "\u041b\u0435\u0442 \u043e\u043f\u044b\u0442\u0430",
-        companies: "\u041a\u043e\u043c\u043f\u0430\u043d\u0438\u0439",
+        companies: "\u041a\u043e\u043c\u043f\u0430\u043d\u0438\u0439 \u0440\u0430\u0431\u043e\u0442\u0430\u043b",
         languages: "\u042f\u0437\u044b\u043a\u043e\u0432",
-        skills: "\u0422\u0435\u0445\u043d\u0438\u0447\u0435\u0441\u043a\u0438\u0445 \u043d\u0430\u0432\u044b\u043a\u043e\u0432",
       },
     },
     experience: {
       index: "02.",
       title: "\u041e\u043f\u044b\u0442 \u0440\u0430\u0431\u043e\u0442\u044b",
       subtitle: "\u041c\u043e\u0439 \u043f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0439 \u043f\u0443\u0442\u044c \u0438 \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0438, \u0432 \u043a\u043e\u0442\u043e\u0440\u044b\u0445 \u044f \u0440\u0430\u0431\u043e\u0442\u0430\u043b.",
+      descriptions: {
+        atos: "", vox: "", quantum: "", apoio: "", sinqia: "", tiradentes: "", workana: "",
+      },
+      roles: {
+        atos: "", vox: "", quantum: "", apoio: "", sinqia: "", tiradentes: "", workana: "",
+      },
     },
     skills: {
       index: "03.",
@@ -301,6 +376,10 @@ const t = {
       index: "04.",
       title: "\u041e\u0431\u0440\u0430\u0437\u043e\u0432\u0430\u043d\u0438\u0435",
       subtitle: "\u041c\u043e\u044f \u0430\u043a\u0430\u0434\u0435\u043c\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043f\u043e\u0434\u0433\u043e\u0442\u043e\u0432\u043a\u0430 \u0438 \u043d\u0435\u043f\u0440\u0435\u0440\u044b\u0432\u043d\u043e\u0435 \u043e\u0431\u0443\u0447\u0435\u043d\u0438\u0435.",
+      degrees: {
+        rtu: "Bachelor\u2019s - Computer Systems",
+        unit: "\u0411\u0430\u043a\u0430\u043b\u0430\u0432\u0440\u0438\u0430\u0442 - \u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0442\u0438\u043a\u0430",
+      },
       mentor: "\u041c\u0435\u043d\u0442\u043e\u0440",
       mentorDesc:
         "\u041c\u0435\u043d\u0442\u043e\u0440\u0441\u0442\u0432\u043e \u0441\u0442\u0443\u0434\u0435\u043d\u0442\u043e\u0432 \u0432 \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0435 \u041f\u041e, \u043f\u043e\u043c\u043e\u0449\u044c \u0441 \u043b\u0443\u0447\u0448\u0438\u043c\u0438 \u043f\u0440\u0430\u043a\u0442\u0438\u043a\u0430\u043c\u0438 \u0438 \u043a\u0430\u0440\u044c\u0435\u0440\u043d\u044b\u043c \u0440\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u043e\u043c.",
@@ -320,6 +399,9 @@ const t = {
       rights: "\u0412\u0441\u0435 \u043f\u0440\u0430\u0432\u0430 \u0437\u0430\u0449\u0438\u0449\u0435\u043d\u044b.",
       built: "\u0421\u0434\u0435\u043b\u0430\u043d\u043e \u043d\u0430",
       description: "Full Stack \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u0447\u0438\u043a \u0438\u0437 \u0410\u0440\u0430\u0436\u0430\u0436\u0443, \u0411\u0440\u0430\u0437\u0438\u043b\u0438\u044f. \u0421\u043e\u0437\u0434\u0430\u044e \u043c\u0430\u0441\u0448\u0442\u0430\u0431\u0438\u0440\u0443\u0435\u043c\u044b\u0435 \u0440\u0435\u0448\u0435\u043d\u0438\u044f \u0441 \u0441\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u043c\u0438 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u044f\u043c\u0438.",
+      links: "\u0421\u0441\u044b\u043b\u043a\u0438",
+      contactTitle: "\u041a\u043e\u043d\u0442\u0430\u043a\u0442",
+      sourceCode: "\u0418\u0441\u0445\u043e\u0434\u043d\u044b\u0439 \u043a\u043e\u0434",
     },
     languages: {
       portuguese: "\u041f\u043e\u0440\u0442\u0443\u0433\u0430\u043b\u044c\u0441\u043a\u0438\u0439",
@@ -347,6 +429,7 @@ const t = {
       greeting: "Sveiki, es esmu",
       subtitle:
         "Full Stack izstr\u0101d\u0101t\u0101js, kas veido m\u0113rogojamus produktus ar C#/.NET, Python, React un AWS. No Araka\u017eu, Braz\u012blija.",
+      role: "Full Stack izstr\u0101d\u0101t\u0101js",
       cta1: "Sazin\u0101ties",
       cta2: "Mani darbi",
     },
@@ -359,15 +442,20 @@ const t = {
       bio3: "Bez programm\u0113\u0161anas esmu studentu mentors un veicu p\u0113t\u012bjumus algoritmu jom\u0101 UNIT. Es ar\u012b pavad\u012bju semestri R\u012bgas Tehniskaj\u0101 universit\u0101t\u0113 Latvij\u0101.",
       stats: {
         years: "Gadu pieredze",
-        companies: "Uz\u0146\u0113mumi",
+        companies: "Uz\u0146\u0113mumi str\u0101d\u0101jis",
         languages: "Valodas",
-        skills: "Tehnisk\u0101s prasmes",
       },
     },
     experience: {
       index: "02.",
       title: "Pieredze",
       subtitle: "Mans profesion\u0101lais ce\u013c\u0161 un uz\u0146\u0113mumi, kuros esmu str\u0101d\u0101jis.",
+      descriptions: {
+        atos: "", vox: "", quantum: "", apoio: "", sinqia: "", tiradentes: "", workana: "",
+      },
+      roles: {
+        atos: "", vox: "", quantum: "", apoio: "", sinqia: "", tiradentes: "", workana: "",
+      },
     },
     skills: {
       index: "03.",
@@ -384,6 +472,10 @@ const t = {
       index: "04.",
       title: "Izgl\u012bt\u012bba",
       subtitle: "Mana akad\u0113misk\u0101 sagatavot\u012bba un nep\u0101rtraukta m\u0101c\u012b\u0161an\u0101s.",
+      degrees: {
+        rtu: "Bachelor\u2019s - Computer Systems",
+        unit: "Bakalaurs - Datorzin\u0101tnes",
+      },
       mentor: "Mentors",
       mentorDesc:
         "Studentu mentor\u0113\u0161ana programmat\u016bras izstr\u0101d\u0113, pal\u012bdzot ar lab\u0101ko praksi un projektu izstr\u0101di.",
@@ -403,6 +495,9 @@ const t = {
       rights: "Visas ties\u012bbas aizsarg\u0101tas.",
       built: "Veidots ar",
       description: "Full Stack izstr\u0101d\u0101t\u0101js no Araka\u017eu, Braz\u012blija. Veidoju m\u0113rogojamus risin\u0101jumus ar m\u016bsdienu tehnolo\u0123ij\u0101m.",
+      links: "Saites",
+      contactTitle: "Kontakti",
+      sourceCode: "Pirmkods",
     },
     languages: {
       portuguese: "Portu\u0123\u0101\u013cu",

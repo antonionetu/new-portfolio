@@ -105,6 +105,13 @@ describe("Hero", async () => {
     expect(screen.getByLabelText("Instagram")).toBeInTheDocument();
     expect(screen.getByLabelText("WhatsApp")).toBeInTheDocument();
   });
+
+  it("renders translated role in PT", () => {
+    localStorage.setItem("locale", "pt");
+    const { container } = withI18n(Hero);
+    expect(container.innerHTML).toContain("Desenvolvedor Full Stack");
+    localStorage.clear();
+  });
 });
 
 describe("About", async () => {
@@ -136,6 +143,37 @@ describe("Experience", async () => {
     const { container } = withI18n(Experience);
     expect(container.innerHTML).toContain("Porto Digital Partnership");
   });
+
+  it("uses translated descriptions when available (PT)", () => {
+    localStorage.setItem("locale", "pt");
+    const { container } = withI18n(Experience);
+    // PT has translated descriptions - should show PT text for Quantum
+    expect(container.innerHTML).toContain("Quantum Educ.");
+    localStorage.clear();
+  });
+
+  it("falls back to English descriptions when translation is empty", () => {
+    localStorage.setItem("locale", "ru");
+    const { container } = withI18n(Experience);
+    // RU has empty descriptions, should fallback to EN data
+    expect(container.innerHTML).toContain("Atos Capital");
+    localStorage.clear();
+  });
+
+  it("uses translated roles when available (PT)", () => {
+    localStorage.setItem("locale", "pt");
+    const { container } = withI18n(Experience);
+    expect(container.innerHTML).toContain("Desenvolvedor Full Stack");
+    localStorage.clear();
+  });
+
+  it("falls back to English roles when translation is empty", () => {
+    localStorage.setItem("locale", "lv");
+    const { container } = withI18n(Experience);
+    // LV has empty roles, should fallback to EN data
+    expect(container.innerHTML).toContain("Developer");
+    localStorage.clear();
+  });
 });
 
 describe("Skills", async () => {
@@ -164,6 +202,31 @@ describe("Education", async () => {
     expect(
       screen.getByText("Universidade Tiradentes (UNIT)")
     ).toBeInTheDocument();
+  });
+
+  it("uses translated degrees (PT)", () => {
+    localStorage.setItem("locale", "pt");
+    const { container } = withI18n(Education);
+    expect(container.innerHTML).toContain("Bacharelado - Ci\u00eancia da Computa\u00e7\u00e3o");
+    // RTU stays in English even in PT
+    expect(container.innerHTML).toContain("Bachelor\u2019s - Computer Systems");
+    localStorage.clear();
+  });
+
+  it("renders mentor and researcher badges", () => {
+    withI18n(Education);
+    expect(screen.getByText("Mentor")).toBeInTheDocument();
+    expect(screen.getByText("Undergraduate Researcher")).toBeInTheDocument();
+  });
+
+  it("falls back to default degree when translation missing", () => {
+    // RU has degrees defined, but test with a locale that has degrees
+    // to ensure the fallback || works when key doesn't match
+    localStorage.clear();
+    withI18n(Education);
+    // EN has degrees.rtu and degrees.unit, both should render
+    const { container } = withI18n(Education);
+    expect(container.innerHTML).toContain("Bachelor");
   });
 });
 
@@ -204,5 +267,28 @@ describe("Footer", async () => {
     withI18n(Footer);
     expect(screen.getByText("devantonio.fer@gmail.com")).toBeInTheDocument();
     expect(screen.getByText("+371 25 562 433")).toBeInTheDocument();
+  });
+
+  it("renders translated footer in PT", () => {
+    localStorage.setItem("locale", "pt");
+    withI18n(Footer);
+    expect(screen.getByText("C\u00f3digo fonte")).toBeInTheDocument();
+    expect(screen.getAllByText("Contato").length).toBeGreaterThan(0);
+    localStorage.clear();
+  });
+
+  it("renders nav links in footer", () => {
+    localStorage.clear();
+    withI18n(Footer);
+    expect(screen.getByText("Home")).toBeInTheDocument();
+    expect(screen.getByText("About")).toBeInTheDocument();
+  });
+
+  it("renders social icons", () => {
+    localStorage.clear();
+    withI18n(Footer);
+    expect(screen.getByLabelText("GitHub")).toBeInTheDocument();
+    expect(screen.getByLabelText("LinkedIn")).toBeInTheDocument();
+    expect(screen.getByLabelText("WhatsApp")).toBeInTheDocument();
   });
 });

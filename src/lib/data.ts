@@ -10,6 +10,7 @@ export const personalInfo = {
 
 export const experiences = [
   {
+    key: "atos",
     company: "Atos Capital",
     role: "Developer",
     type: "Porto Digital Partnership",
@@ -28,6 +29,7 @@ export const experiences = [
     ],
   },
   {
+    key: "vox",
     company: "Vox",
     role: "Full Stack Developer",
     type: "Full-time",
@@ -51,6 +53,7 @@ export const experiences = [
     ],
   },
   {
+    key: "quantum",
     company: "Quantum Educacional",
     role: "Full Stack Developer",
     type: "Full-time",
@@ -74,6 +77,7 @@ export const experiences = [
     ],
   },
   {
+    key: "apoio",
     company: "Apoio Fiel",
     role: "Backend Developer",
     type: "Porto Digital Partnership",
@@ -92,6 +96,7 @@ export const experiences = [
     ],
   },
   {
+    key: "sinqia",
     company: "Sinqia (via rethinqit)",
     role: "Frontend Developer",
     type: "Outsourced",
@@ -102,6 +107,7 @@ export const experiences = [
     techs: ["Angular", "SASS", "TypeScript", "RxJS", "Jasmine", "REST APIs"],
   },
   {
+    key: "tiradentes",
     company: "Grupo Tiradentes",
     role: "Frontend Developer",
     type: "Porto Digital Partnership",
@@ -119,6 +125,7 @@ export const experiences = [
     ],
   },
   {
+    key: "workana",
     company: "Workana (Freelance)",
     role: "Freelance Developer",
     type: "Freelance",
@@ -140,6 +147,7 @@ export const experiences = [
 
 export const education = [
   {
+    key: "rtu",
     institution: "Riga Technical University (RTU)",
     degree: "Bachelor\u2019s - Computer Systems",
     period: "Jan 2025 - Jul 2025",
@@ -147,6 +155,7 @@ export const education = [
     url: "https://www.rtu.lv/en",
   },
   {
+    key: "unit",
     institution: "Universidade Tiradentes (UNIT)",
     degree: "Bachelor\u2019s - Computer Science",
     period: "Feb 2023 - Jun 2027",

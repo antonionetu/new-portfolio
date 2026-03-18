@@ -45,7 +45,7 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="p-6 rounded-2xl border border-brand-border bg-brand-card/30 hover:border-brand-purple/30 transition-all group"
+              className="p-6 rounded-2xl border border-brand-border bg-brand-card/30 hover:border-brand-purple/30 transition-all duration-300 group"
             >
               <div className="flex items-center gap-3 mb-5">
                 <span className="w-10 h-10 rounded-xl bg-brand-purple/10 border border-brand-purple/20 flex items-center justify-center text-brand-purple font-mono text-xs font-bold">
@@ -60,7 +60,7 @@ export default function Skills() {
                 {items.map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1.5 text-sm rounded-lg border border-brand-border bg-brand-dark/50 text-brand-muted hover:text-brand-lime hover:border-brand-lime/30 hover:bg-brand-lime/5 transition-colors cursor-default"
+                    className="px-3 py-1.5 text-sm rounded-lg border border-brand-border bg-brand-dark/50 text-brand-muted hover:text-brand-lime hover:border-brand-lime/30 hover:bg-brand-lime/5 transition-colors duration-300 cursor-default"
                   >
                     {skill}
                   </span>

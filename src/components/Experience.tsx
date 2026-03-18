@@ -34,11 +34,11 @@ export default function Experience() {
               >
                 <div className="absolute left-0 md:left-8 top-1 -translate-x-1/2 w-3 h-3 rounded-full bg-brand-purple border-4 border-brand-dark" />
 
-                <div className="p-6 rounded-2xl border border-brand-border bg-brand-card/30 hover:border-brand-purple/30 hover:bg-brand-card/50 transition-all group">
+                <div className="p-6 rounded-2xl border border-brand-border bg-brand-card/30 hover:border-brand-purple/30 hover:bg-brand-card/50 transition-all duration-300 group">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
                     <div>
-                      <h3 className="text-lg font-semibold text-white group-hover:text-brand-lime transition-colors">
-                        {exp.role}
+                      <h3 className="text-lg font-semibold text-white group-hover:text-brand-lime transition-colors duration-300">
+                        {(t.experience as any).roles?.[exp.key] || exp.role}
                       </h3>
                       <p className="text-brand-purple font-medium">
                         {exp.company}
@@ -54,7 +54,7 @@ export default function Experience() {
                   </div>
 
                   <p className="text-brand-muted text-sm leading-relaxed mb-4">
-                    {exp.description}
+                    {(t.experience as any).descriptions?.[exp.key] || exp.description}
                   </p>
 
                   {exp.techs.length > 0 && (
@@ -62,7 +62,7 @@ export default function Experience() {
                       {exp.techs.map((tech) => (
                         <span
                           key={tech}
-                          className="px-2.5 py-1 text-xs font-mono rounded-md bg-brand-purple/10 text-brand-purple border border-brand-purple/20 hover:bg-brand-lime/10 hover:text-brand-lime hover:border-brand-lime/30 transition-colors"
+                          className="px-2.5 py-1 text-xs font-mono rounded-md bg-brand-purple/10 text-brand-purple border border-brand-purple/20 hover:bg-brand-lime/10 hover:text-brand-lime hover:border-brand-lime/30 transition-colors duration-300"
                         >
                           {tech}
                         </span>

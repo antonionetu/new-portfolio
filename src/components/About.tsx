@@ -36,7 +36,7 @@ export default function About() {
           {stats.map((stat, i) => (
             <div
               key={stat.label}
-              className="p-5 rounded-2xl border border-brand-border bg-brand-card/50 hover:border-brand-purple/30 transition-colors text-center"
+              className="p-5 rounded-2xl border border-brand-border bg-brand-card/50 hover:border-brand-purple/30 transition-colors duration-300 text-center"
             >
               <motion.span
                 initial={{ opacity: 0, scale: 0.5 }}
@@ -63,7 +63,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.15 }}
-              className="p-6 rounded-2xl border border-brand-border bg-brand-card/30 hover:border-brand-purple/20 transition-colors"
+              className="p-6 rounded-2xl border border-brand-border bg-brand-card/30 hover:border-brand-purple/20 transition-colors duration-300"
             >
               <span className="text-brand-lime font-mono text-xs font-bold mb-3 block">
                 {String(i + 1).padStart(2, "0")}
@@ -84,7 +84,7 @@ export default function About() {
           {languages.map((lang) => (
             <span
               key={lang.key}
-              className="px-4 py-2 text-sm rounded-xl border border-brand-border bg-brand-card/50 text-brand-muted hover:border-brand-lime/30 hover:text-brand-lime transition-colors"
+              className="px-4 py-2 text-sm rounded-xl border border-brand-border bg-brand-card/50 text-brand-muted hover:border-brand-lime/30 hover:text-brand-lime transition-colors duration-300"
             >
               {t.languages[lang.key]}{" "}
               <span className="text-brand-purple">&middot;</span>{" "}
